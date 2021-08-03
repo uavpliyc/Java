@@ -6,6 +6,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch Calculator",
+      "request": "launch",
+      "mainClass": "Calculator",
+      "projectName": "Java_34d39ec3"
+    },
+    {
+      "type": "java",
+      "name": "Launch Caluculator",
+      "request": "launch",
+      "mainClass": "Caluculator",
+      "projectName": "Java_34d39ec3"
+    },
+    {
+      "type": "java",
       "name": "Launch And",
       "request": "launch",
       "mainClass": "And",
