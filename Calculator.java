@@ -1,18 +1,28 @@
 public class Calculator {
   public static void main(String[] args) {
-    int a = 6;
-    int b = 3;
-    String x;
-    
-    a = Integer.parseInt(args[0]);
-    x = args[1];
-    b = Integer.parseInt(args[2]);
 
-    System.out.println(a + b);
-    System.out.println(a - b);
-    System.out.println(a * b);
-    System.out.println(a / b);
-    System.out.println(a % b);
-    System.out.println(x);
+    //Javaコマンドに(クラスを除き)引き渡した第１引数の値をint型に変換し、変数aに代入
+    int a = Integer.parseInt(args[0]);
+    String x = args[1];
+    int b = Integer.parseInt(args[2]);
+
+    if (args.length != 3){
+      System.out.println("引数は3つにしてください");
+    }
+
+    switch(x){
+    case "p":
+      System.out.println(a + b);
+      break;
+    case "mi":
+      System.out.println(a - b);
+      break;
+    case "mu":
+      System.out.println(a * b);
+      break;
+    case "d":
+      System.out.println(a / b);
+      break;
+    }
   }
 }
