@@ -8,6 +8,7 @@ public class Calculator {
 
     if (args.length != 3){
       System.out.println("引数は3つにしてください");
+      System.exit(0);
     }
 
     switch(x){
