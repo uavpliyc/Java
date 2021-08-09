@@ -1,7 +1,8 @@
 public class AccessModifier {
   public static void main(String[] args){
-    Access acc = new Access();
-    System.out.println(acc.A);
-    System.out.println(acc.B);
+    //インスタンス化
+    Access acc = new Access(10);
+    // System.out.println(acc.A);
+    System.out.println(acc.getB());
   }
 }
