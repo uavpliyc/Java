@@ -15,5 +15,11 @@ public class Test {
         System.out.println("no");
         break;
     }
+
+    int i;
+    for(i = 0; i <= 10; i++){
+      System.out.println(i);
+    }
+    System.out.println(i);
   }
 }
