@@ -12,23 +12,23 @@ public class InstanceStatic {
       System.out.println(staticVal);
     }
 
-    //インスタンスメソッド→インスタンス変数
+    //①インスタンスメソッド→インスタンス変数
     int A(){
       return instanceVal;
     }
-    //インスタンスメソッド→static変数
+    //②インスタンスメソッド→static変数
     int B(){
       return staticVal;
     }
-    //staticメソッド→static変数
+    //③staticメソッド→static変数
     static int C(){
       return staticVal;
     }
-    //staticメソッド→インスタンス変数
+    //④staticメソッド→インスタンス変数
     // static int D(){
     //   return instanceVal;
     // }
-    //インスタンス化→staticメソッド→インスタンス変数
+    //⑤インスタンス化→staticメソッド→インスタンス変数
     static int D(){
       InstanceStatic y = new InstanceStatic();
       return y.instanceVal;
