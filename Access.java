@@ -7,7 +7,7 @@ public class Access {
     A = B;
   }
 
-  //public修飾子のメソッド
+  //アクセサメソッド
   public int getB(){
     return A;
   }
