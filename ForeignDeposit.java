@@ -8,7 +8,7 @@ public class ForeignDeposit extends Deposit{
     super(number, name, balance);
   }
 
-  //自インスタンスの残高を日本円残高で返すメソッド
+  //自インスタンスの残高を日本円残高で返すゲッターメソッド
   public int getBalanceByYen(){
     return getBalance() * rate;
   }
