@@ -1,3 +1,5 @@
+package A;
+
 public class AnimalMain {
   public static void main(String[] args){
     Cat tama = new Cat();

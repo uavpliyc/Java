@@ -1,3 +1,4 @@
+package Bank;
 public class BankAccount {
   //口座名義
   private String myname;
