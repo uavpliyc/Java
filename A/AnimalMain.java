@@ -6,12 +6,6 @@ public class AnimalMain {
     Dog pochi = new Dog();
 
     Animal[] animal = new Animal[]{tama, pochi};
-    voices(animal);
-  }
-
-  private static void voices(Animal[] animals){
-    for(Animal animal : animals){
-      animal.voice();
-    }
+    AnimalUtil.voices(animal);
   }
 }

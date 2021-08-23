@@ -1,3 +1,4 @@
+package Calc;
 public class Calc {
 
   //四則演算メソッド

@@ -1,3 +1,4 @@
+package ChangeType;
 abstract class ChangeTypeAbstract {
   int x = 10;
   int y = 20;

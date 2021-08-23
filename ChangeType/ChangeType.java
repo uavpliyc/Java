@@ -1,3 +1,4 @@
+package ChangeType;
 public class ChangeType {
   public static void main(String[] args){
 
