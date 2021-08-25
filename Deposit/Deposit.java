@@ -1,3 +1,4 @@
+package Deposit;
 public class Deposit {
 
   //口座番号の宣言
@@ -19,7 +20,12 @@ public class Deposit {
     balance += val;
   }
   //出金処理
-  public void outBalance(int val){
+  public void outBalance(int val) throws DepositException{
+    //出金額が自インスタンスの残高より大きい場合
+    if(val > balance){
+      //銀行口座例外をスローする
+      throw new DepositException("残高はマイナスにできません");
+    }
     balance -= val;
   }
   //残高取得処理ゲッター

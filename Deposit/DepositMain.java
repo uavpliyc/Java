@@ -1,3 +1,4 @@
+package Deposit;
 public class DepositMain {
   public static void main(String[] args) {
 
@@ -19,7 +20,12 @@ public class DepositMain {
           dept.inBalance(val);
           break;
         case "OUT":
-          dept.outBalance(val);
+          try{
+            dept.outBalance(val);
+          }
+          catch(DepositException e){
+            e.printStackTrace();
+          }
           break;
       }
       System.out.println("口座名：" + dept.getName() + "（口座番号：" + dept.getNumber() + "） 残高：" + dept.getBalance() + "円");
@@ -35,7 +41,12 @@ public class DepositMain {
           fdept.inBalance(val);
           break;
         case "OUT":
-          fdept.outBalance(val);
+          try{
+            fdept.outBalance(val);
+          }
+          catch(DepositException e){
+            e.printStackTrace();
+          }
           break;
       }
       System.out.println("外貨口座名：" + fdept.getName() + "（口座番号：" + fdept.getNumber() + "） 残高：" + fdept.getBalance() + "ドル("

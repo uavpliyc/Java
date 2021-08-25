@@ -1,3 +1,4 @@
+package Deposit;
 public class ForeignDeposit extends Deposit{
 
   //レート用メンバ変数の宣言
