@@ -1,3 +1,5 @@
+package Student;
+
 public class Student {
   public static String race;
   public String name;
