@@ -1,3 +1,5 @@
+package Setnumber;
+
 public class SetNumber {
   private int num1;
   private int num2;

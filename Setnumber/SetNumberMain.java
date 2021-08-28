@@ -1,3 +1,5 @@
+package Setnumber;
+
 public class SetNumberMain {
   public static void main(String[] args) {
     //引数引き渡しているのでコンストラクタ①が呼び出される
