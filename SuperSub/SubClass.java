@@ -1,3 +1,5 @@
+package SuperSub;
+
 public class SubClass extends SuperClass {
   //コンストラクタ
   SubClass(){

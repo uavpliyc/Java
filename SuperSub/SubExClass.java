@@ -1,3 +1,5 @@
+package SuperSub;
+
 class SubExClass extends ExClass {
   public void increase(int i) { // 引数を1000倍にするメソッド
     int x = i * 1000;
