@@ -1,3 +1,4 @@
+package Access;
 public class AccessModifier {
   public static void main(String[] args){
     //インスタンス化

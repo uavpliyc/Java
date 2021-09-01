@@ -1,3 +1,4 @@
+package Access;
 public class Access {
   //private修飾子のインスタンス変数
   private int A;
