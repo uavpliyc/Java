@@ -1,3 +1,4 @@
+package Generics;
 public class generics<E> {
   private E val;
 
