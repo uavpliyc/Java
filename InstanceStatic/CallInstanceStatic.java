@@ -1,3 +1,4 @@
+package InstanceStatic;
 public class CallInstanceStatic {
   public static void main(String[] args){
     //InstanceStaticクラスのstatic変数を呼び出し

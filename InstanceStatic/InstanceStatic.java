@@ -1,3 +1,4 @@
+package InstanceStatic;
 public class InstanceStatic {
     //インスタンス変数
     int instanceVal = 10;
