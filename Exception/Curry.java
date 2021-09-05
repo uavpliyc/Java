@@ -1,3 +1,4 @@
+package Exception;
 public class Curry {
   String name = "カレー";
   public String taste() {
