@@ -10,6 +10,7 @@ public class Array {
     array[2] = Integer.parseInt(args[0]);
     for(int i = 0; i < array.length; i++){
       System.out.println(array[i]);
+      System.out.println(array[i] * 1.1);
     }
   }
 }
