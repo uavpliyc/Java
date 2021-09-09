@@ -24,6 +24,9 @@ public class Calculator {
       case "%":
         System.out.println(a % b);
         break;
+      case "tax":
+        System.out.println(a * 1.1);
+        break;
       }
     }
     catch(NumberFormatException e){
