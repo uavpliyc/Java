@@ -12,5 +12,13 @@ class And {
     if ((a == b) || (a == c)) {
       System.out.println("aとbは等しい、または、aとcは等しい");
     }
+    String test1 = "abc";
+    String test2 = "abc";
+    if(test1 == test2){
+      System.out.println("test1はtest2と等しい");
+    }
+    if(test1.equals(test2)){
+      System.out.println("test1はtest2と等しい");
+    }
   }
 }
