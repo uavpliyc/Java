@@ -3,6 +3,7 @@ public class ReturnVal {
     int n = 10;
     int total = calc(n);
     System.out.println(total);
+    System.out.println(total % 2);
   }
   public static int calc(int num){
     num += 100;
