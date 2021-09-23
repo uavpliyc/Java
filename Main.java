@@ -5,12 +5,15 @@ class Main {
     int answer = x * y;
     char data[] = {'a','b'};
 
-    String greeting = "Hello World!";
-    System.out.println(greeting);
     System.out.println(data);
     System.out.println("答えは" + answer);
     if (x <= y) {
       System.out.println("xはy以下です");
+    }
+    for(int i = 0; i <= 100; i++){
+      if(i % 2 == 0){
+        System.out.println(i + "は偶数");
+      }
     }
   }
 }
