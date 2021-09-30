@@ -3,22 +3,25 @@ package EnumTest;
 public class EnumSample {
 
   public static void main(String[] args) {
-    Name name = Name.Tanaka;
+    Season season = Season.Autumn;
 
-    switch (name) {
-      case Tanaka:
-        System.out.println(1);
+    switch (season) {
+      case Spring:
+        System.out.println("春");
         break;
-      case Sato:
-        System.out.println(2);
+      case Summer:
+        System.out.println("夏");
         break;
-      case Kimura:
-        System.out.println(3);
+      case Autumn:
+        System.out.println("秋");
+        break;
+      case Winter:
+        System.out.println("冬");
         break;
     }
   }
 
-  protected enum Name {
-    Tanaka, Sato, Kimura
+  protected enum Season {
+    Spring, Summer, Autumn, Winter
   };
 }

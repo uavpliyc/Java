@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch EnumSample",
+      "request": "launch",
+      "mainClass": "EnumTest.EnumSample",
+      "projectName": "Java_34d39ec3"
+    },
+    {
+      "type": "java",
       "name": "Launch Sample",
       "request": "launch",
       "mainClass": "Exception.Sample",
