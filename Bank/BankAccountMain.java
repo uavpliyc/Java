@@ -1,10 +1,8 @@
 package Bank;
 public class BankAccountMain {
   public static void main(String[] args) {
-		BankAccount acc = new BankAccount();
+		new BankAccount("田中", 10000);
+		new BankAccount("増田", 100);
 
-		acc.setName("田中太郎");
-		acc.setBalance(1000000);
-		acc.showAccount();
 	}
 }
