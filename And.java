@@ -20,5 +20,18 @@ class And {
     if(test1.equals(test2)){
       System.out.println("test1はtest2と等しい");
     }
+
+    AndTest str1 = new AndTest();
+    AndTest str2 = new AndTest();
+    if(str1.str == str2.str){
+      System.out.println("str1はstr2と等しい");
+    }
+    if(str1.str.equals(str2.str)){
+      System.out.println("str1はstr2と等しい");
+    }
   }
+}
+
+class AndTest{
+  public String str = "str";
 }
