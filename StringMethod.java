@@ -4,5 +4,6 @@ public class StringMethod {
     System.out.println(str1.replaceAll("bronze", "silver"));
     System.out.println(str1.indexOf("silver"));
     System.out.println(str1);
+    System.out.println(str1.charAt(0));
   }
 }
