@@ -8,7 +8,7 @@ public class StringMethod {
     //◯番目の文字
     System.out.println(str1.charAt(0));
 
-    String s = "123.45";
+    // String s = "123.45";
     // int i = Integer.parseInt(s);
     //NumberFormatException
     // System.out.println(i);
