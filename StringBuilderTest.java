@@ -6,6 +6,7 @@ public class StringBuilderTest{
     sb.append("Version8");
     sb.delete(3,6);
     System.out.println(sb);
+    //capacityメソッド：バッファ容量確認
     System.out.println(sb.capacity());
 
     StringBuilder sb2 = new StringBuilder("abcd");
