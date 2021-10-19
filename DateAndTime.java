@@ -5,5 +5,7 @@ public class DateAndTime {
     //コンストラクタがprivateなのでインスタンス生成はできない
     LocalDate now = LocalDate.now();
     System.out.println(now);
+    LocalDate ofDate = LocalDate.of(2021, 10, 19);
+    System.out.println(ofDate);
   }
 }
