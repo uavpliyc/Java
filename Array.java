@@ -9,5 +9,14 @@ public class Array{
 
     int[] array2 = {10, 20, 30, 40, 50};
     System.out.println(array == array2);
+
+    String[] array3 = new String[5];
+    array3[0] = "a";
+    array3[1] = "b";
+    array3[2] = "c";
+    //ぬるぽにはならない
+    for(String i : array3){
+      System.out.println(i);
+    }
   }
 }
