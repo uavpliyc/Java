@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Array{
   public static void main(String[] args) {
     int[] array = { 10, 20, 30, 40, 50 };
@@ -18,5 +20,10 @@ public class Array{
     for(String i : array3){
       System.out.println(i);
     }
+
+    ArrayList<Integer> list = new ArrayList<>();
+    list.add(1);
+    list.add(2);
+    System.out.println(list);
   }
 }
