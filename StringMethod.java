@@ -26,5 +26,8 @@ public class StringMethod {
     //internメソッド：コンスタントプールを参照
     System.out.println(str3.intern() == "intern");
 
+    //replaceAllメソッド：第１引数の文字列を第２引数文字列に変更したインスタンスを生成
+    String str5 = str2.replaceAll(" ", "?");
+    System.out.println(str5);
   }
 }
