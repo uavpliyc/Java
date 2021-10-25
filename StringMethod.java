@@ -29,5 +29,6 @@ public class StringMethod {
     //replaceAllメソッド：第１引数の文字列を第２引数文字列に変更したインスタンスを生成
     String str5 = str2.replaceAll(" ", "?");
     System.out.println(str5);
+    System.out.println(String.valueOf(str5));
   }
 }
