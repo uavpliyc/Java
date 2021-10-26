@@ -5,7 +5,8 @@ public class Loop {
     for(String list: str){
       // iを初期化しないため、3でfalseになる
       for( ; i<3 ; i++){
-        System.out.print(i);
+        System.out.println(i);
+        System.out.println(list);
       }
     }
   }
