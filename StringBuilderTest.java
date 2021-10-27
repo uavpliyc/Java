@@ -11,5 +11,10 @@ public class StringBuilderTest{
 
     StringBuilder sb2 = new StringBuilder("abcd");
     System.out.println(sb2.capacity());
+    
+    // replaceメソッド：0から(2-1)番目までを変える
+    sb2.replace(0, 2, "x");
+    System.out.println(sb2);
+    
   }
 }

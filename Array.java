@@ -25,5 +25,12 @@ public class Array{
     list.add(1);
     list.add(2);
     System.out.println(list);
+    
+    String[] arr = new String[3];
+    arr[1] = "a";
+    for (String s : arr){
+      System.out.println(s);
+    }
+    
   }
 }
