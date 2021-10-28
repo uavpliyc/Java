@@ -25,12 +25,21 @@ public class Array{
     list.add(1);
     list.add(2);
     System.out.println(list);
-    
+
     String[] arr = new String[3];
     arr[1] = "a";
     for (String s : arr){
       System.out.println(s);
     }
-    
+
+    // cloneメソッド：新しい配列を生成し、要素をコピー
+    int[][] intA = {{1,2,3},{4,5,6}};
+    int[][] intB = intA.clone();
+    for (int i : intA[0]){
+      System.out.println(i);
+    }
+    System.out.println(intA == intB);
+    System.out.println(intA[0] == intB[0]);
+
   }
 }
