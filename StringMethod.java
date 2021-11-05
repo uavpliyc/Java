@@ -5,7 +5,7 @@ public class StringMethod {
     System.out.println(str1.indexOf("silver"));
     //Stringはイミュータブル
     System.out.println(str1);
-    //◯番目の文字
+    //charAtメソッド：◯番目の文字
     System.out.println(str1.charAt(0));
 
     // String s = "123.45";
@@ -30,5 +30,8 @@ public class StringMethod {
     String str5 = str2.replaceAll(" ", "?");
     System.out.println(str5);
     System.out.println(String.valueOf(str5));
+
+    //toUpperCaseメソッド：大文字に変換
+    System.out.println(str5.toUpperCase());
   }
 }
