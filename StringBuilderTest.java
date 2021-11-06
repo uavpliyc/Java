@@ -16,5 +16,11 @@ public class StringBuilderTest{
     sb2.replace(0, 2, "x");
     System.out.println(sb2);
     
+    StringBuilder sb3 = new StringBuilder();
+    for (int i = 1; i <= 100; i++){
+      sb3.append(i);
+      sb3.append(",");
+    }
+    System.out.println(sb3);
   }
 }
