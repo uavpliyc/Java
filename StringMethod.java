@@ -33,5 +33,11 @@ public class StringMethod {
 
     //toUpperCaseメソッド：大文字に変換
     System.out.println(str5.toUpperCase());
+    
+    // formatメソッド：第1引数に雛形、第2引数に指定値
+    // d:整数、s:文字列、f:小数、b:真偽値
+    final String FORMAT = "名前：%s年齢：%d";
+    String s = String.format(FORMAT, "田中", 28);
+    System.out.println(s);
   }
 }
