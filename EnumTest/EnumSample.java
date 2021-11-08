@@ -19,6 +19,9 @@ public class EnumSample {
         System.out.println("冬");
         break;
     }
+
+    // ordinalメソッド：添字表示
+    System.out.println(season.ordinal());
   }
 
   protected enum Season {
