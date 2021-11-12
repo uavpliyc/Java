@@ -1,3 +1,6 @@
+import java.util.Arrays;
+import java.util.List;
+
 public class Array{
   public static void main(String[] args) {
     int[] array = { 10, 20, 30, 40, 50 };
@@ -34,5 +37,12 @@ public class Array{
     System.out.println(intA == intB);
     System.out.println(intA[0] == intB[0]);
 
+    String[] arr2 = {"a", "b", "c"};
+    // asListメソッド：配列をリストに変換
+    List<String> list = Arrays.asList(arr2);
+    // list.add("d"); →UnsupportedOperationException:元は配列だから、固定サイズ
+    for(int i = 0; i < list.size(); i++) {
+      System.out.println(list.get(i));
+    }
   }
 }
