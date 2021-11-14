@@ -40,7 +40,7 @@ public class Array{
     String[] arr2 = {"a", "b", "c"};
     // asListメソッド：配列をリストに変換
     List<String> list = Arrays.asList(arr2);
-    // list.add("d"); →UnsupportedOperationException:元は配列だから、固定サイズ
+    // list.add("d"); //→UnsupportedOperationException:元は配列だから、固定サイズ
     for(int i = 0; i < list.size(); i++) {
       System.out.println(list.get(i));
     }

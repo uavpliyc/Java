@@ -80,3 +80,18 @@ class Wand {
     this.power = power;
   }
 }
+
+class Hero {
+  public String setHp(String s){
+    return null;
+  }
+  public String getHp(){
+    return null;
+  }
+  public String getMp(){
+    return null;
+  }
+  public String getName(){
+    return null;
+  }
+}
