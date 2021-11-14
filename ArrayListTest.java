@@ -10,5 +10,7 @@ public class ArrayListTest {
     System.out.println(list.size());
     System.out.println(list.get(1));
 
+    list.add(0, 10);
+    System.out.println(list);
   }
 }
