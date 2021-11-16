@@ -15,5 +15,8 @@ public class ArrayListTest {
 
     System.out.println(list.contains(1));
     System.out.println(list.contains(5));
+
+    // forEach
+    list.forEach(item -> System.out.println(item));
   }
 }
