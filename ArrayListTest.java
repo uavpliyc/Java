@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class ArrayListTest {
   public static void main(final String[] args) {
@@ -18,5 +19,9 @@ public class ArrayListTest {
 
     // forEach
     list.forEach(item -> System.out.println(item));
+
+    Iterator iter = list.iterator();
+    while(iter.hasNext())
+      System.out.println(iter.next());
   }
 }
