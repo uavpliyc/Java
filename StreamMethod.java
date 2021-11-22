@@ -1,5 +1,7 @@
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.stream.IntStream;
 
 public class StreamMethod {
@@ -25,5 +27,13 @@ public class StreamMethod {
      */
     int result4 = data2.reduce(0, (a,b) -> a + b);
     System.out.println(result4);
+
+    // いろんなSystem
+    Set<String> set = new HashSet<>();
+    set.add("c");
+    set.add("a");
+    set.add("b");
+    set.forEach(System.out::println);
+    set.forEach(s -> System.out.println(s));
   }
 }
