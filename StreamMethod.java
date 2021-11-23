@@ -35,5 +35,12 @@ public class StreamMethod {
     set.add("b");
     set.forEach(System.out::println);
     set.forEach(s -> System.out.println(s));
+
+    List<Integer> a = Arrays.asList(1,2);
+    List<Integer> b = Arrays.asList(3,4);
+    List<List<Integer>> c = Arrays.asList(a, b);
+    c.stream().flatMap(e -> e.stream())
+    .map(e -> e + 1).forEach(System.out::println);
+
   }
 }
