@@ -6,8 +6,8 @@ import java.io.IOException;
 
 public class FileStream {
   public static void main(String[] args) {
-    try (FileOutputStream fos = new FileOutputStream(new File("ren/test.txt"));
-        FileInputStream fis = new FileInputStream(new File("ren/test.txt"))) {
+    try (FileOutputStream fos = new FileOutputStream(new File("/Users/user/Desktop/test.txt"));
+        FileInputStream fis = new FileInputStream(new File("/Users/user/Desktop/test.txt"))) {
         fos.write(0);
         fos.write("suzuki".getBytes());
         fos.write(99);
