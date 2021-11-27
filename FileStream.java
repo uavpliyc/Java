@@ -1,7 +1,11 @@
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 
 public class FileStream {
@@ -22,5 +26,22 @@ public class FileStream {
       } catch (IOException e) {
           System.err.println("IO Error");
       }
-  }
+
+    // BufferedWriter BufferedReader
+
+    try (BufferedWriter bw = new BufferedWriter(new FileWriter("/Users/user/Desktop/test.txt"));
+      BufferedReader br = new BufferedReader(new FileReader("/Users/user/Desktop/test.txt"))) {
+        bw.write("good morning");
+        bw.newLine();
+        bw.write("hello");
+        bw.flush();
+        String data2 = null;
+        while ((data2 = br.readLine()) != null) {
+          System.out.println(data2);
+        }
+      } catch (IOException e) {
+        e.printStackTrace();
+      }
+
+    }
 }
