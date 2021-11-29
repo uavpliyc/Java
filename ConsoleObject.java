@@ -6,6 +6,7 @@ public class ConsoleObject {
     Console con = System.console();
     PrintWriter pw = con.writer();
     while (true) {
+      // readLineメソッド：Stringを返す
       String str = con.readLine();
       if (str.equals("")) {
         break;
