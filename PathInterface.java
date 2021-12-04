@@ -24,5 +24,7 @@ public class PathInterface {
       e.printStackTrace();
     }
 
+    System.out.println(path.normalize());
+
   }
 }
