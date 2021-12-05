@@ -11,6 +11,8 @@ public class ThreadClass {
   }
 }
 
+// スレッドの出力は毎回変わる
+
 class ThreadA extends Thread {
   public void run(){
     for (int i = 0; i < 10; i++){
