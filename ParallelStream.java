@@ -10,5 +10,11 @@ public class ParallelStream {
         }
       )
       .forEach(s -> System.out.println(s + ""));
+
+    // forEachOrderedメソッド
+    Arrays.asList("one", "two", "three")
+      .parallelStream()
+      .forEachOrdered(s -> System.out.println(s + ""));
+
   }
 }
