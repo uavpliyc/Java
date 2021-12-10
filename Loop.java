@@ -7,6 +7,7 @@ public class Loop {
       for( ; i<3 ; i++){
         System.out.println(i);
         System.out.println(list);
+        System.out.println(list.length());
       }
     }
   }
