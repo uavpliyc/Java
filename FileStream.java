@@ -43,5 +43,13 @@ public class FileStream {
         e.printStackTrace();
       }
 
+    try (BufferedReader br = new BufferedReader(new FileReader("/Users/user/Desktop/test.txt"))) {
+      System.out.println(br.readLine());
+      br.skip(2);
+      System.out.println(br.readLine());
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
+
     }
 }
