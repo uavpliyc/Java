@@ -20,5 +20,12 @@ public class ConsoleObject {
     for (char c : pass) {
       System.out.println(c);
     }
+
+    Console console = System.console();
+    String str = null;
+    char[] password = null;
+    str = console.readLine();
+    password = console.readPassword();
+
   }
 }
