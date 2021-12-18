@@ -8,6 +8,8 @@ public class Jdbc {
     String sql = "SELECT name FROM department";
     try (Connection con = DbConnector.getConnect();
         Statement stmt = con.createStatement();
+        // boolean result1 = stmt.execute(sql);
+        // int result2 = stmt.executeUpdate(sql);
         ResultSet rs = stmt.executeQuery(sql)
         ) {
           if (rs != null) System.out.println("rs != null!");
