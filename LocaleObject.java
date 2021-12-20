@@ -1,4 +1,5 @@
 import java.util.Locale;
+import java.util.ResourceBundle;
 
 public class LocaleObject {
   public static void main(String[] args) {
@@ -13,5 +14,12 @@ public class LocaleObject {
 
     System.out.println(us.getDisplayCountry(us));
     System.out.println(us.getDisplayLanguage(us));
+
+    Locale[] locArray = {japan, us};
+    for (Locale locale : locArray) {
+      ResourceBundle obj = ResourceBundle.getBundle("MyResources", locale);
+      System.out.println(obj.getString("send"));
+      System.out.println(obj.getString("cancel"));
+    }
   }
 }
