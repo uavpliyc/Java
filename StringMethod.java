@@ -1,3 +1,8 @@
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
+
 public class StringMethod {
   public static void main(String[] args) {
     String str1 = "bronze,silver,gold";
@@ -39,5 +44,10 @@ public class StringMethod {
     final String FORMAT = "名前：%s年齢：%d";
     String s = String.format(FORMAT, "田中", 28);
     System.out.println(s);
+
+    //compareToメソッド
+    List<String> list = Arrays.asList("Apple", "Orange", "Banana", "Peach", "Lemon");
+    Collections.sort(list, (a,b) -> b.compareTo(a));
+    list.forEach(System.out::println);
   }
 }
