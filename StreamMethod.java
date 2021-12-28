@@ -1,6 +1,7 @@
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Optional;
 import java.util.Set;
 import java.util.stream.IntStream;
 
@@ -41,6 +42,13 @@ public class StreamMethod {
     List<List<Integer>> c = Arrays.asList(a, b);
     c.stream().flatMap(e -> e.stream())
     .map(e -> e + 1).forEach(System.out::println);
+
+    String[] values = {"age", "name", "sample"};
+    List<String> list = Arrays.asList(values);
+    // Optional型を返す ×String型
+    Optional<String> str = list.stream().filter(s -> s.length() > 3).findFirst();
+    System.out.println(str);
+    System.out.println(str.get());
 
   }
 }
