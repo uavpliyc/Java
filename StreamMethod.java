@@ -20,7 +20,7 @@ public class StreamMethod {
 
     data1.forEach(System.out::println);
 
-    IntStream data2 = IntStream.of(10,20,30);
+    IntStream data2 = IntStream.of(1,2,3,4,5);
     /**
      * reduceメソッド
      * @param1 初期値
@@ -28,6 +28,9 @@ public class StreamMethod {
      */
     int result4 = data2.reduce(0, (a,b) -> a + b);
     System.out.println(result4);
+
+    // 上記と同じ
+    System.out.println(IntStream.rangeClosed(1, 5).sum());
 
     // いろんなSystem
     Set<String> set = new HashSet<>();
