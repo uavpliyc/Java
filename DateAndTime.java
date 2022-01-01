@@ -1,6 +1,7 @@
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.time.Month;
 import java.time.Period;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
@@ -32,6 +33,12 @@ public class DateAndTime {
 
     Date d = new Date();
     System.out.println(d);
+
+    LocalDate start = LocalDate.of(2021, Month.JANUARY, 1);
+    LocalDate end = LocalDate.of(2021, Month.JANUARY, 20);
+    // Periodクラスのbetweenメソッド
+    Period period = Period.between(start, end);
+    System.out.println(period);
 
     // -----------------------「LocalTimeクラス」--------------------------------
 
@@ -76,11 +83,13 @@ public class DateAndTime {
     System.out.println(zone);
 
     // -----------------------「Periodクラス」--------------------------------
-
+    
     // betweenメソッド：第１と第２の差(P:Period,Y:Year,M:Month,D:Date)
     LocalDate futureDate = LocalDate.of(2025, 3, 26);
     Period pe = Period.between(now, futureDate);
     System.out.println(pe);
-
+    
+    // -----------------------「DateTimeクラス」--------------------------------
+    DateTimeFormatter dFormatter = DateTimeFormatter.ofPattern("MMMM");
   }
 }
