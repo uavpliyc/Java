@@ -22,10 +22,8 @@ public class ConsoleObject {
     }
 
     Console console = System.console();
-    String str = null;
-    char[] password = null;
-    str = console.readLine();
-    password = console.readPassword();
+    String str = console.readLine();
+    char[] password = console.readPassword();;
 
   }
 }
