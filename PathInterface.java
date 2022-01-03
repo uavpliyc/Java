@@ -17,6 +17,9 @@ public class PathInterface {
     // getRootメソッド
     System.out.format("getRoot: %s%n" , path.getRoot());
 
+    // getParentメソッド：１階層上のオブジェクト(/Users/user/Desktop)
+    System.out.println(path.getParent());
+
     // walkメソッド：指定ディレクトリ以下の探索
     try {
       Files.walk(path).forEach(System.out::println);
