@@ -34,6 +34,7 @@ public class FileStream {
         bw.write("good morning");
         bw.newLine();
         bw.write("hello");
+        // flushメソッド：入力値を反映させる
         bw.flush();
         String data2 = null;
         while ((data2 = br.readLine()) != null) {
