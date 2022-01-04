@@ -27,6 +27,7 @@ public class PathInterface {
       e.printStackTrace();
     }
 
+    // normalizeメソッド：パスを簡潔に
     System.out.println(path.normalize());
 
   }
