@@ -91,5 +91,6 @@ public class DateAndTime {
     
     // -----------------------「DateTimeクラス」--------------------------------
     DateTimeFormatter dFormatter = DateTimeFormatter.ofPattern("MMMM");
+    System.out.println(dFormatter.getLocale());
   }
 }
