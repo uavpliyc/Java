@@ -32,6 +32,7 @@ public class FileStream {
     try (BufferedWriter bw = new BufferedWriter(new FileWriter("/Users/user/Desktop/test.txt"));
       BufferedReader br = new BufferedReader(new FileReader("/Users/user/Desktop/test.txt"))) {
         bw.write("good morning");
+        // newLineメソッド：１行追加
         bw.newLine();
         bw.write("hello");
         // flushメソッド：入力値を反映させる
