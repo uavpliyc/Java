@@ -20,7 +20,7 @@ public class ArrayListTest {
     // forEach
     list.forEach(item -> System.out.println(item));
 
-    Iterator iter = list.iterator();
+    Iterator<Integer> iter = list.iterator();
     while(iter.hasNext())
       System.out.println(iter.next());
   }
