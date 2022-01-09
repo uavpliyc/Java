@@ -15,6 +15,9 @@ public class ScheduledExecutorServiceInterface {
 
       ScheduledFuture<?> result1 = service.schedule(task1, 3, TimeUnit.SECONDS);
       ScheduledFuture<Date> result2 = service.schedule(task2, 1, TimeUnit.MILLISECONDS);
+
+      System.out.println(result1);
+      System.out.println(result2);
     } finally {
       if (service != null) {
         service.shutdown();
