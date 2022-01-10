@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch Cow",
+      "request": "launch",
+      "mainClass": "Cow",
+      "projectName": "Java_34d39ec3"
+    },
+    {
+      "type": "java",
       "name": "Launch EnumSample",
       "request": "launch",
       "mainClass": "EnumTest.EnumSample",

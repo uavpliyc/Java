@@ -14,5 +14,6 @@ public class Cow extends Animal {
     for (Animal a: animals){
       a.say();
     }
+    say();
   }
 }
