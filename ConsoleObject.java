@@ -23,7 +23,9 @@ public class ConsoleObject {
 
     Console console = System.console();
     String str = console.readLine();
-    char[] password = console.readPassword();;
+    char[] password = console.readPassword();
+
+    System.out.println(str + " " + password.toString());
 
   }
 }
