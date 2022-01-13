@@ -5,10 +5,12 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.nio.charset.Charset;
+import java.util.Properties;
 
 public class task1 {
   public static void main(String[] args) {
@@ -53,6 +55,15 @@ public class task1 {
 
     } catch (Exception e) {
       e.printStackTrace();
+    }
+
+    try {
+      FileReader pFile = new FileReader("task2.properties");
+      Properties p = new Properties();
+      p.load(pFile);
+      System.out.println(p.getProperty("unicode"));
+    } catch (Exception e) {
+      System.out.println(e.getMessage());
     }
 
   }
