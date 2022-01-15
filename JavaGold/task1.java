@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.nio.charset.Charset;
+import java.time.LocalDateTime;
 import java.util.Properties;
 
 public class task1 {
@@ -17,7 +18,10 @@ public class task1 {
     
     try (FileOutputStream fos = new FileOutputStream(new File("/Users/user/Desktop/JavaGold/Task_1.log"), true);
         OutputStreamWriter osw = new OutputStreamWriter(fos, Charset.forName("UTF-8"))) {
+      LocalDateTime now = LocalDateTime.now();
       fos.write(0);
+      fos.write(now.getMonth().getValue());
+      fos.write(now.getDayOfMonth());
       fos.write("test".getBytes());
       fos.write(99);
     } catch (FileNotFoundException e) {
