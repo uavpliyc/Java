@@ -1,29 +1,27 @@
 package JavaGold;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
 import java.nio.charset.Charset;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Properties;
 
 public class task1 {
   public static void main(String[] args) {
     
-    try (FileOutputStream fos = new FileOutputStream(new File("/Users/user/Desktop/JavaGold/Task_1.log"), true);
-        OutputStreamWriter osw = new OutputStreamWriter(fos, Charset.forName("UTF-8"))) {
-      LocalDateTime now = LocalDateTime.now();
-      fos.write(0);
-      fos.write(now.getMonth().getValue());
-      fos.write(now.getDayOfMonth());
-      fos.write("test".getBytes());
-      fos.write(99);
+    LocalDateTime now = LocalDateTime.now();
+
+    try (BufferedWriter bw = new BufferedWriter(new FileWriter("/Users/user/Desktop/JavaGold/Task_1.log"));
+        BufferedReader br = new BufferedReader(new FileReader("/Users/user/Desktop/JavaGold/Task_1.log"))) {
+          bw.write(now.format(DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss")));
     } catch (FileNotFoundException e) {
       System.out.println("ファイルがありません");
     } catch (IOException e) {
