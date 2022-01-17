@@ -19,7 +19,7 @@ public class task1 {
     
     LocalDateTime now = LocalDateTime.now();
 
-    try (BufferedWriter bw = new BufferedWriter(new FileWriter("/Users/user/Desktop/JavaGold/Task_1.log"));
+    try (BufferedWriter bw = new BufferedWriter(new FileWriter("/Users/user/Desktop/JavaGold/Task_1.log", true));
         BufferedReader br = new BufferedReader(new FileReader("/Users/user/Desktop/JavaGold/Task_1.log"))) {
           bw.write(now.format(DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss")));
     } catch (FileNotFoundException e) {
