@@ -13,6 +13,7 @@ import java.nio.charset.Charset;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Properties;
+import java.util.logging.Logger;
 
 public class task1 {
   public static void main(String[] args) {
@@ -67,6 +68,16 @@ public class task1 {
     } catch (Exception e) {
       System.out.println(e.getMessage());
     }
+
+    final Logger logger = Logger.getLogger("Logging");
+
+    logger.finest("隣の客はよく柿食う客だ。");
+    logger.finer("東京都特許許可局。");
+    logger.fine("かえるぴょこぴょこ。");
+    logger.config("庭には二羽鶏が。");
+    logger.info("生麦生米生卵。");
+    logger.warning("あかまきがみ。");
+    logger.severe("すもももももももものうち。");
 
   }
 }
