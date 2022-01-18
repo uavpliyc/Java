@@ -1,9 +1,7 @@
 package JavaGold;
 
-import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.UnsupportedEncodingException;
 import java.util.logging.LogManager;
 import java.util.logging.Logger;
 
@@ -41,10 +39,8 @@ public class Logging  {
                  + " はクラスパス上に見つかりませんでした。");
         } else {
             try {
-                LogManager.getLogManager().readConfiguration(
-                    inStream);
-                logger.config(
-                    "ログ設定: LogManagerを設定しました。");
+                LogManager.getLogManager().readConfiguration(inStream);
+                logger.config("ログ設定: LogManagerを設定しました。");
             } catch (IOException e) {
                 logger.warning("ログ設定: LogManager設定の際に"
                     +"例外が発生しました。:"+ e.toString());
