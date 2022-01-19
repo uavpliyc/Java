@@ -5,7 +5,7 @@ import java.io.InputStream;
 import java.util.logging.LogManager;
 import java.util.logging.Logger;
 
-public class Logging  {
+public class Logging {
 
   /**
     * ログ設定プロパティファイルのファイル内容
