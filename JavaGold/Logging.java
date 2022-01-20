@@ -1,58 +1,91 @@
 package JavaGold;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
-import java.util.logging.LogManager;
-import java.util.logging.Logger;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Properties;
 
 public class Logging {
 
-  /**
-    * ログ設定プロパティファイルのファイル内容
-    */
-    protected static final String LOGGING_PROPERTIES_DATA
-        = "handlers=java.util.logging.ConsoleHandler\n"
-        + ".level=FINEST\n"
-        + "java.util.logging.ConsoleHandler.level=FINEST\n"
-        + "java.util.logging.ConsoleHandler.formatter"
-        + "=java.util.logging.SimpleFormatter";
+    private static final String LOGGING_PROPERTIES = "JavaGold/task2.properties";
+    private static final Properties properties = new Properties();
+    static LocalDateTime now = LocalDateTime.now();
+    static File fileName = new File(Logging.getProperty("OutputDirectory") + Logging.getProperty("LogFileName") + ".log");
+    static File timeFileName = new File(Logging.getProperty("OutputDirectory") + Logging.getProperty("LogFileName") + now.format(DateTimeFormatter.ofPattern("yyyy/MM/dd")) + ".log");
 
-     /**
-    * ログ設定プロパティファイルのファイル名
-    */
-    protected static final String LOGGING_PROPERTIES
-        = "task2.properties";
+    private Logging() throws Exception {};
 
-    /**
-    * static initializer によるログ設定の初期化
-    */
     static {
-        final Logger logger = Logger.getLogger("Logging");
-        // クラスパスの中から ログ設定プロパティファイルを取得
-        logger.fine("ログ設定: " + LOGGING_PROPERTIES
-            + " をもとにログを設定します。");
-        final InputStream inStream = Logging.class
-            .getClassLoader().getResourceAsStream(
-            LOGGING_PROPERTIES);
-        if (inStream == null) {
-            logger.info("ログ設定: " + LOGGING_PROPERTIES
-                 + " はクラスパス上に見つかりませんでした。");
-        } else {
-            try {
-                LogManager.getLogManager().readConfiguration(inStream);
-                logger.config("ログ設定: LogManagerを設定しました。");
-            } catch (IOException e) {
-                logger.warning("ログ設定: LogManager設定の際に"
-                    +"例外が発生しました。:"+ e.toString());
-            } finally {
-                try {
-                    if (inStream != null) inStream.close();
-                } catch (IOException e) {
-                    logger.warning("ログ設定: ログ設定プロパティ"
-                        +"ファイルのストリームクローズ時に例外が"
-                        +"発生しました。:"+ e.toString());
-                }
-            }
+        try {
+            properties.load(Files.newBufferedReader(Paths.get(LOGGING_PROPERTIES), StandardCharsets.UTF_8));
+        } catch (IOException e) {
+            // ファイル読み込みに失敗
+            System.out.println(String.format("ファイルの読み込みに失敗しました。ファイル名:%s", LOGGING_PROPERTIES));
         }
     }
+
+    /**
+     * プロパティ値を取得する
+     *
+     * @param key キー
+     * @return 値
+     */
+    public static String getProperty(final String key) {
+        return getProperty(key, "");
+    }
+
+    /**
+     * プロパティ値を取得する
+     *
+     * @param key          キー
+     * @param defaultValue デフォルト値
+     * @return キーが存在しない場合、デフォルト値 存在する場合、値
+     */
+    public static String getProperty(final String key, final String defaultValue) {
+        return properties.getProperty(key, defaultValue);
+    }
+
+    /**
+     * プログラムからの出力(ファイルに書き込み)
+     */
+    public static void outputToLog() {
+        try (FileOutputStream fos = new FileOutputStream(fileName, true);
+            OutputStreamWriter osw = new OutputStreamWriter(fos, Logging.getProperty("CharacterCode"));) {
+            osw.write(now.format(DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss")));
+            fileName.renameTo(timeFileName);
+        } catch (FileNotFoundException e) {
+            System.out.println("ファイルがありません");
+        } catch (IOException e) {
+            System.out.println("IO Error");
+        }
+    }
+
+    /**
+     * プログラムへの入力(ファイル読み込み)
+     */
+    public static void inputFromFile() {
+        try (FileInputStream fis = new FileInputStream("/Users/user/Desktop/JavaGold/Task1.txt");
+            InputStreamReader isr = new InputStreamReader(fis, Logging.getProperty("CharacterCode"));
+            BufferedReader br = new BufferedReader(isr);) {
+            String text;
+            while ((text = br.readLine()) != null) {
+                System.out.println(text);
+            }
+        } catch (FileNotFoundException e) {
+            System.out.println("ファイルがありません");
+        } catch (IOException e) {
+            System.out.println("IO Error");
+        }
+    }
+
 }
