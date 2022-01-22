@@ -10,6 +10,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -20,8 +21,7 @@ public class Logging {
     private static final String LOGGING_PROPERTIES = "JavaGold/task2.properties";
     private static final Properties properties = new Properties();
     static LocalDateTime now = LocalDateTime.now();
-    static File fileName = new File(Logging.getProperty("OutputDirectory") + Logging.getProperty("LogFileName") + ".log");
-    static File timeFileName = new File(Logging.getProperty("OutputDirectory") + Logging.getProperty("LogFileName") + now.format(DateTimeFormatter.ofPattern("yyyy/MM/dd")) + ".log");
+
 
     private Logging() throws Exception {};
 
@@ -59,11 +59,14 @@ public class Logging {
      * プログラムからの出力(ファイルに書き込み)
      */
     public static void outputToLog() {
-        try (FileOutputStream fos = new FileOutputStream(fileName, true);
+        // File fileName = new File(Logging.getProperty("OutputDirectory") + Logging.getProperty("LogFileName") + ".log");
+
+        try (
+            FileOutputStream fos = new FileOutputStream(Logging.getProperty("OutputDirectory") + Logging.getProperty("LogFileName") + "-" + now.format(DateTimeFormatter.ofPattern("yyyy/MM/dd")) + ".log", true);
             OutputStreamWriter osw = new OutputStreamWriter(fos, Logging.getProperty("CharacterCode"));) {
             osw.write(now.format(DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss")));
-            fileName.renameTo(timeFileName);
         } catch (FileNotFoundException e) {
+            Path filePath = Paths.get(Logging.getProperty("OutputDirectory") + Logging.getProperty("LogFileName") + "-" + now.format(DateTimeFormatter.ofPattern("yyyy/MM/dd")) + ".log");
             System.out.println("ファイルがありません");
         } catch (IOException e) {
             System.out.println("IO Error");
