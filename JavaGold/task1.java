@@ -1,6 +1,7 @@
 package JavaGold;
 
 import java.io.File;
+import java.util.Calendar;
 import java.util.logging.Logger;
 
 public class task1 {
@@ -8,6 +9,19 @@ public class task1 {
     
     Logging.outputToLog();
     Logging.inputFromFile();
+    Logging.startTime();
+
+    BusinessDayCalculator bdc = new BusinessDayCalculator(new DefaultJapaneseDayOffResolver());
+    Calendar from = Calendar.getInstance();
+    Calendar cal = null;
+    String date = null;
+
+    // fromから10日後
+    cal = bdc.getDate(from, 10);
+    date = cal.get(Calendar.YEAR) + "/" +
+      (cal.get(Calendar.MONTH) + 1) + "/" +
+    cal.get(Calendar.DAY_OF_MONTH);
+    System.out.println(date);
 
       File dir = new File("/Users/user/Desktop/JavaGold");
 

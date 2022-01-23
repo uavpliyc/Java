@@ -91,4 +91,26 @@ public class Logging {
         }
     }
 
+    /**
+     * 開始日時出力メソッド
+     */
+    public static long startTime() {
+        long start = System.currentTimeMillis();
+        System.out.println(start);
+        return start;
+    }
+
+     /**
+     * 終了日時出力メソッド
+     */
+    public static long endTime() {
+        long end = System.currentTimeMillis();
+        long progress = end - (startTime());
+        System.out.println(end);
+        System.out.println(progress);
+        return progress;
+    }
+
+
+
 }
