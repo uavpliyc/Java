@@ -10,7 +10,6 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
-import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -59,14 +58,15 @@ public class Logging {
      * プログラムからの出力(ファイルに書き込み)
      */
     public static void outputToLog() {
-        // File fileName = new File(Logging.getProperty("OutputDirectory") + Logging.getProperty("LogFileName") + ".log");
+
+        File file = new File(Logging.getProperty("OutputDirectory") + Logging.getProperty("LogFileName") + "-" + now.toString() + ".log");
 
         try (
-            FileOutputStream fos = new FileOutputStream(Logging.getProperty("OutputDirectory") + Logging.getProperty("LogFileName") + "-" + now.format(DateTimeFormatter.ofPattern("yyyy/MM/dd")) + ".log", true);
-            OutputStreamWriter osw = new OutputStreamWriter(fos, Logging.getProperty("CharacterCode"));) {
+            FileOutputStream fos = new FileOutputStream(file, true);
+            OutputStreamWriter osw = new OutputStreamWriter(fos, Logging.getProperty("CharacterCode"));
+            ) {
             osw.write(now.format(DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss")));
         } catch (FileNotFoundException e) {
-            Path filePath = Paths.get(Logging.getProperty("OutputDirectory") + Logging.getProperty("LogFileName") + "-" + now.format(DateTimeFormatter.ofPattern("yyyy/MM/dd")) + ".log");
             System.out.println("ファイルがありません");
         } catch (IOException e) {
             System.out.println("IO Error");

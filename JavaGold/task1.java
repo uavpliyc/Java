@@ -1,8 +1,6 @@
 package JavaGold;
 
 import java.io.File;
-import java.io.FileReader;
-import java.util.Properties;
 import java.util.logging.Logger;
 
 public class task1 {
