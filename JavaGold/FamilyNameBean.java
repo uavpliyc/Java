@@ -2,41 +2,33 @@ package JavaGold;
 
 public class FamilyNameBean {
   
-  private String Chinese;
+  private String kanji;
   private String hiragana;
   private String English;
-  private String sex;
 
-  public String getChinese() {
-    return this.Chinese;
-  }
+	public String getKanji() {
+		return this.kanji;
+	}
 
-  public void setChinese(String Chinese) {
-    this.Chinese = Chinese;
-  }
+	public void setKanji(String kanji) {
+		this.kanji = kanji;
+	}
 
-  public String getHiragana() {
-    return this.hiragana;
-  }
+	public String getHiragana() {
+		return this.hiragana;
+	}
 
-  public void setHiragana(String hiragana) {
-    this.hiragana = hiragana;
-  }
+	public void setHiragana(String hiragana) {
+		this.hiragana = hiragana;
+	}
 
-  public String getEnglish() {
-    return this.English;
-  }
+	public String getEnglish() {
+		return this.English;
+	}
 
-  public void setEnglish(String English) {
-    this.English = English;
-  }
+	public void setEnglish(String English) {
+		this.English = English;
+	}
 
-  public String getSex() {
-    return this.sex;
-  }
-
-  public void setSex(String sex) {
-    this.sex = sex;
-  }
 
 }
