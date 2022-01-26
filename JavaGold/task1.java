@@ -51,6 +51,10 @@ public class task1 {
         System.out.println("null");
       }
 
+    OutputName on = new OutputName();
+    on.OutputFirstName();
+    on.OutputFamilyName();
+
     final Logger logger = Logger.getLogger("Logging");
 
     logger.finest("隣の客はよく柿食う客だ。");
