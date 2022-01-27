@@ -15,23 +15,11 @@ public class OutputName {
     try (
       BufferedReader br = new BufferedReader(new FileReader("JavaGold/FirstName.csv"));
       ) {
-        String currentContent;
-        int row = 0;
-        String[] arrayColumnName = null;
-        while((currentContent = br.readLine()) != null) {
-          System.out.println(row + "行目のデータ");
-          if(row == 0) {
-            arrayColumnName = currentContent.split(",");
-          } else {
-            int arrayNumber = 0;
-            String[] arrayColumnData = currentContent.split(",");
-            for(String columnName : arrayColumnName) {
-              // カラム名と該当行のデータをコンソール出力
-              System.out.println(columnName + " = " + arrayColumnData[arrayNumber]);
-              arrayNumber++;
-            }
-          }
-          row++;
+        String line;
+        final String delimiter = ",";
+        while ((line = br.readLine()) != null) {
+          String[] token = line.split(delimiter);
+          System.out.println(token[0] + " | "+ token[1]+ " | "+ token[2]+ " | "+ token[3]);
         }
     } catch (FileNotFoundException e) {
         System.out.println("ファイルがありません");
@@ -45,23 +33,11 @@ public class OutputName {
     try (
       BufferedReader br = new BufferedReader(new FileReader("JavaGold/FirstName.csv"));
       ) {
-        String currentContent;
-        int row = 0;
-        String[] arrayColumnName = null;
-        while((currentContent = br.readLine()) != null) {
-          System.out.println(row + "行目のデータ");
-          if(row == 0) {
-            arrayColumnName = currentContent.split(",");
-          } else {
-            int arrayNumber = 0;
-            String[] arrayColumnData = currentContent.split(",");
-            for(String columnName : arrayColumnName) {
-              // カラム名と該当行のデータをコンソール出力
-              System.out.println(columnName + " = " + arrayColumnData[arrayNumber]);
-              arrayNumber++;
-            }
-          }
-          row++;
+        String line;
+        final String delimiter = ",";
+        while ((line = br.readLine()) != null) {
+          String[] token = line.split(delimiter);
+          System.out.println(token[0] + " | "+ token[1]+ " | "+ token[2]);
         }
     } catch (FileNotFoundException e) {
         System.out.println("ファイルがありません");
