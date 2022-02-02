@@ -15,7 +15,7 @@ public class ConsoleObject {
       pw.flush();
     }
 
-    // readPassword：入力がコンソール上に表示されない(入力中)
+    // readPassword：入力がコンソール上に表示されない(入力中)(char[]型を返す)
     char[] pass = con.readPassword();
     for (char c : pass) {
       System.out.println(c);
