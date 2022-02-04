@@ -1,6 +1,9 @@
 package JavaGold;
 
-public class People {
+import java.io.Serializable;
+
+// シリアライズ(オブジェクトを入出力可能)
+public class People implements Serializable {
 
   private int id;
   private String kanji;

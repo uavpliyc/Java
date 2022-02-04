@@ -1,9 +1,12 @@
 package JavaGold;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.io.OutputStreamWriter;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -41,16 +44,28 @@ public class OutputRandomData {
       System.out.println(list.getPremium());
     }
 
-    try (
-        FileOutputStream fos = new FileOutputStream(new File(Logging.getProperty("OutputDirectory") + "Contractor_" + nowFormat + ".csv"));
-        OutputStreamWriter osw = new OutputStreamWriter(fos);
-    ) {
-      osw.write(1);
-    } catch (FileNotFoundException e) {
-      System.out.println("ファイルがありません");
-    } catch (IOException e) {
-      System.out.println("IO Error");
+    try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("Contractor_" + nowFormat + ".csv"));
+        ObjectInputStream ois = new ObjectInputStream(new FileInputStream("Contractor_" + nowFormat + ".csv"))) {
+      // 書き出し
+      oos.writeObject(tanaka);
+      // 読み込み(戻り値：Object型)
+      People readTanaka = (People)ois.readObject();
+      System.out.println(readTanaka.getId());
+      System.out.println(readTanaka.getKanji());
+    } catch (ClassNotFoundException | IOException e) {
+      e.printStackTrace();
     }
+
+    // try (
+    //     FileOutputStream fos = new FileOutputStream(new File(Logging.getProperty("OutputDirectory") + "Contractor_" + nowFormat + ".csv"));
+    //     OutputStreamWriter osw = new OutputStreamWriter(fos);
+    // ) {
+    //   osw.write(1);
+    // } catch (FileNotFoundException e) {
+    //   System.out.println("ファイルがありません");
+    // } catch (IOException e) {
+    //   System.out.println("IO Error");
+    // }
 
   }
 
