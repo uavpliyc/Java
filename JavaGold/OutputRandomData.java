@@ -44,8 +44,8 @@ public class OutputRandomData {
       System.out.println(list.getPremium());
     }
 
-    try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("Contractor_" + nowFormat + ".csv"));
-        ObjectInputStream ois = new ObjectInputStream(new FileInputStream("Contractor_" + nowFormat + ".csv"))) {
+    try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("task1.csv"));
+        ObjectInputStream ois = new ObjectInputStream(new FileInputStream("task1.csv"))) {
       // 書き出し
       oos.writeObject(tanaka);
       // 読み込み(戻り値：Object型)
