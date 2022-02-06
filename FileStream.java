@@ -7,6 +7,11 @@ import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 
 public class FileStream {
   public static void main(String[] args) {
@@ -50,6 +55,17 @@ public class FileStream {
       br.skip(2);
       System.out.println(br.readLine());
     } catch (IOException e) {
+      e.printStackTrace();
+    }
+
+    Path path = Paths.get("/Users/user/Desktop/test.txt");
+    try {
+      System.out.println(
+        "linesメソッド：" +
+        Files.lines(path)
+          .collect(Collectors.toList())
+      );
+    } catch(IOException e) {
       e.printStackTrace();
     }
 
