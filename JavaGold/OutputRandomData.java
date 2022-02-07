@@ -1,15 +1,11 @@
 package JavaGold;
 
-import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.io.OutputStreamWriter;
 import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
 import gold8.data.RandomData;
@@ -22,10 +18,8 @@ public class OutputRandomData {
     System.out.println(RandomData.getIntList(0, 100, 1, 10)
     );
 
-    
     LocalDateTime now = LocalDateTime.now();
-    String nowFormat = now.format(DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss"));
-    
+
     People tanaka = new People(1,"田中","たなか","tanaka","男","1993/03/26",now.toString(),10000000,10000);
 
     ArrayList<People> peopleList = new ArrayList<>();
