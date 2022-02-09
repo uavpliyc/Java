@@ -12,6 +12,7 @@ public class Jdbc {
         // int result2 = stmt.executeUpdate(sql);
         ResultSet rs = stmt.executeQuery(sql)
         ) {
+          // executeQueryはnullを返さない(空のResultSetを返す)
           if (rs != null) System.out.println("rs != null!");
           if (rs.next()) {
             System.out.println(rs.getString(1));
