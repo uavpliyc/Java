@@ -3,6 +3,7 @@ import java.util.ResourceBundle;
 
 public class LocaleObject {
   public static void main(String[] args) {
+    // Localオブジェクト
     Locale japan = Locale.getDefault();
     System.out.println(japan.getDisplayCountry());
     System.out.println(japan.getDisplayLanguage());
@@ -15,6 +16,7 @@ public class LocaleObject {
     System.out.println(us.getDisplayCountry(us));
     System.out.println(us.getDisplayLanguage(us));
 
+    // リソースバンドル
     Locale[] locArray = {japan, us};
     for (Locale locale : locArray) {
       ResourceBundle obj = ResourceBundle.getBundle("MyResources", locale);
