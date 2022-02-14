@@ -1,3 +1,4 @@
+import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -20,10 +21,19 @@ public class Format {
       e.printStackTrace();
     }
 
-
     DateTimeFormatter fmt = DateTimeFormatter.ofPattern("yy,MM,dd");
     String target = "21,12,22";
     LocalDate date = LocalDate.parse(target, fmt);
     System.out.println(date);
+
+    customFormat("##.#", 12.3);
+    customFormat("000.0", 12.3);
+  }
+
+  // カスタムフォーマットメソッド
+  public static void customFormat(String pattern, double val) {
+    DecimalFormat df = new DecimalFormat(pattern);
+    String data = df.format(val);
+    System.out.println(data);
   }
 }
