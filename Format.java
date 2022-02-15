@@ -28,6 +28,12 @@ public class Format {
 
     customFormat("##.#", 12.3);
     customFormat("000.0", 12.3);
+
+    LocalDate localDate = LocalDate.of(2022, 2, 15);
+    System.out.println(localDate.getDayOfYear() + "/365");
+    System.out.println(localDate.getDayOfMonth());
+    System.out.println(localDate.getDayOfWeek());
+
   }
 
   // カスタムフォーマットメソッド
