@@ -1,6 +1,7 @@
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.time.LocalDate;
+import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 
 public class Format {
@@ -25,6 +26,8 @@ public class Format {
     String target = "21,12,22";
     LocalDate date = LocalDate.parse(target, fmt);
     System.out.println(date);
+    LocalTime time = LocalTime.parse("22:00");
+    System.out.println(time);
 
     customFormat("##.#", 12.3);
     customFormat("000.0", 12.3);
