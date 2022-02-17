@@ -3,6 +3,7 @@ import java.text.NumberFormat;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
+import java.time.format.FormatStyle;
 
 public class Format {
   public static void main(String[] args) {
@@ -36,6 +37,10 @@ public class Format {
     System.out.println(localDate.getDayOfYear() + "/365");
     System.out.println(localDate.getDayOfMonth());
     System.out.println(localDate.getDayOfWeek());
+
+    // ofLocalizedDateメソッド(/区切りになる)
+    DateTimeFormatter fmt2 = DateTimeFormatter.ofLocalizedDate(FormatStyle.MEDIUM);
+    System.out.println(fmt2.format(date));
 
   }
 
