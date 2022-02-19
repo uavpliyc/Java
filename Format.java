@@ -42,11 +42,14 @@ public class Format {
     // ofLocalizedDateメソッド(/区切りになる)
     DateTimeFormatter fmt2 = DateTimeFormatter.ofLocalizedDate(FormatStyle.MEDIUM);
     System.out.println(fmt2.format(date));
+    // ofLocalizedTimeメソッド
+    DateTimeFormatter fmt3 = DateTimeFormatter.ofLocalizedTime(FormatStyle.MEDIUM);
+    System.out.println(fmt3.format(time));
     // ofLocalizedDateTimeメソッド
-    DateTimeFormatter fmt3 = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM);
-    // System.out.println(fmt3.format(time)); 実行時例外
+    DateTimeFormatter fmt4 = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM);
+    // System.out.println(fmt4.format(time)); 実行時例外
     LocalDateTime now = LocalDateTime.now();
-    System.out.println(fmt3.format(now));
+    System.out.println(fmt4.format(now));
 
   }
 
