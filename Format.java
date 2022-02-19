@@ -1,6 +1,7 @@
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
@@ -41,6 +42,11 @@ public class Format {
     // ofLocalizedDateメソッド(/区切りになる)
     DateTimeFormatter fmt2 = DateTimeFormatter.ofLocalizedDate(FormatStyle.MEDIUM);
     System.out.println(fmt2.format(date));
+    // ofLocalizedDateTimeメソッド
+    DateTimeFormatter fmt3 = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM);
+    // System.out.println(fmt3.format(time)); 実行時例外
+    LocalDateTime now = LocalDateTime.now();
+    System.out.println(fmt3.format(now));
 
   }
 
