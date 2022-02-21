@@ -11,7 +11,7 @@ public class ImplementsB implements InterfaceB {
   }
 
   public void clear() {
-
+    list = null;
   }
 
 }
