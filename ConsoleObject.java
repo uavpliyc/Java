@@ -27,5 +27,10 @@ public class ConsoleObject {
 
     System.out.println(str + " " + password.toString());
 
+    // Consoleオブジェクトで入力した文字列を表示するメソッド
+    console.printf(str);
+    console.format(str);
+    console.writer().println(str);
+
   }
 }
