@@ -1,5 +1,7 @@
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 public class ArrayListTest {
   public static void main(final String[] args) {
@@ -19,6 +21,9 @@ public class ArrayListTest {
 
     // forEach
     list.forEach(item -> System.out.println(item));
+
+    // コピー
+    List<Integer> list2 = new CopyOnWriteArrayList<>(list);
 
     Iterator<Integer> iter = list.iterator();
     while(iter.hasNext())
