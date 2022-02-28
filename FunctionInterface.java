@@ -9,7 +9,17 @@ import java.util.function.ToIntFunction;
 import java.util.function.UnaryOperator;
 
 public class FunctionInterface {
+
+  // 独自の関数型インターフェース
+  @FunctionalInterface
+  public interface Foo {
+    // 抽象メソッド1つ
+    void x();
+  }
+
   public static void main(String[] args) {
+
+
     /**
      * Functionインターフェース
      * @param T
