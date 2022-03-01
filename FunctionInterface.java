@@ -82,5 +82,10 @@ public class FunctionInterface {
     // 異なる型を引数に、基本データ型を返す関数型インターフェース
     ToIntFunction<String> obj1 = (String s) -> {return s.length();};
     System.out.println(obj1.applyAsInt("value"));
+
+    // コンストラクタ参照
+    Function<String,Integer> f = Integer::new;
+    Integer i = f.apply("1");
+    System.out.println(i);
   }
 }
