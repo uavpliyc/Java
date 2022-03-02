@@ -53,5 +53,10 @@ public class StreamMethod {
     System.out.println(str);
     System.out.println(str.get());
 
+    // range(終わり含まない)
+    IntStream.range(1, 5).forEach(System.out::println);
+    // rangeClosed(終わり含む)
+    IntStream.rangeClosed(1, 5).forEach(System.out::println);
+
   }
 }
