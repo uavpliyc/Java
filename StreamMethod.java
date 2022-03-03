@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 public class StreamMethod {
   public static void main(String[] args) {
@@ -57,6 +58,18 @@ public class StreamMethod {
     IntStream.range(1, 5).forEach(System.out::println);
     // rangeClosed(終わり含む)
     IntStream.rangeClosed(1, 5).forEach(System.out::println);
+
+    // sortedメソッド(自然順)
+    Arrays.asList(2,3,1).stream()
+    .sorted()
+    .forEach(System.out::println);
+
+    Stream<String> stream = Stream.of("banana","apple","orange")
+    .filter(e -> e.length() > 5)
+    .peek(e -> System.out.println(e + " "))
+    .map(String::toUpperCase)
+    .peek(e -> System.out.println(e + " "));
+    stream.forEach(System.out::println);
 
   }
 }
