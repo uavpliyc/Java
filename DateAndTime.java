@@ -1,3 +1,4 @@
+import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
@@ -11,6 +12,14 @@ import java.util.Date;
 public class DateAndTime {
   public static void main(String[] args) {
     //コンストラクタがprivateなのでインスタンス生成はできない
+
+    // java.timeパッケージ2つの列挙型
+    for (DayOfWeek dayOfWeek : DayOfWeek.values()) {
+      System.out.println(dayOfWeek);
+    }
+    for (Month month : Month.values()) {
+      System.out.println(month);
+    }
 
     // -----------------------「LocalDateクラス」--------------------------------
 
