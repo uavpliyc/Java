@@ -7,6 +7,7 @@ import java.time.Period;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
 import java.util.Date;
 
 public class DateAndTime {
@@ -47,7 +48,10 @@ public class DateAndTime {
     LocalDate end = LocalDate.of(2021, Month.JANUARY, 20);
     // Periodクラスのbetweenメソッド
     Period period = Period.between(start, end);
-    System.out.println(period);
+    System.out.println("period:" + period);
+    // TemporalUnitインターフェースの実装クラスChronoUnitのbetweenメソッド
+    long days = ChronoUnit.DAYS.between(start, end);
+    System.out.println("ChronoUnit:" + days);
 
     // -----------------------「LocalTimeクラス」--------------------------------
 
