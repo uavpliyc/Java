@@ -91,6 +91,7 @@ public class DateAndTime {
     // -----------------------「ZoneDateTimeクラス」--------------------------------
 
     // ZoneIdクラス：タイムゾーンID(+09:00は協定世界時との時差)
+    // systemDefaultメソッド
     ZoneId zoneId = ZoneId.systemDefault();
     ZonedDateTime zone = ZonedDateTime.of(ofDateTime, zoneId);
     System.out.println(zone);
