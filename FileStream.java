@@ -51,8 +51,11 @@ public class FileStream {
 
     try (BufferedReader br = new BufferedReader(new FileReader("/Users/user/Desktop/test.txt"))) {
       System.out.println(br.readLine());
+      // skipメソッド：n文字スキップする
       br.skip(2);
       System.out.println(br.readLine());
+      // markメソッド：現在の位置をマークする(そこからn文字までが読み取り限度)
+      br.mark(3);
     } catch (IOException e) {
       e.printStackTrace();
     }

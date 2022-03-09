@@ -97,12 +97,12 @@ public class DateAndTime {
     System.out.println(zone);
 
     // -----------------------「Periodクラス」--------------------------------
-    
+
     // betweenメソッド：第１と第２の差(P:Period,Y:Year,M:Month,D:Date)
     LocalDate futureDate = LocalDate.of(2025, 3, 26);
     Period pe = Period.between(now, futureDate);
     System.out.println(pe);
-    
+
     // -----------------------「DateTimeクラス」--------------------------------
     DateTimeFormatter dFormatter = DateTimeFormatter.ofPattern("MMMM");
     System.out.println(dFormatter.getLocale());
