@@ -16,9 +16,10 @@ public class PathInterface {
     System.out.format("getNameCount: %s%n" , path.getNameCount());
     // getRootメソッド
     System.out.format("getRoot: %s%n" , path.getRoot());
-
     // getParentメソッド：１階層上のオブジェクト(/Users/user/Desktop)
     System.out.println(path.getParent());
+    // subPathメソッド：開始から終わりまでのパスを返す(0スタート、終わり含まない)
+    System.out.println("subPath: %s%n" + path.subpath(1, 3));
 
     // walkメソッド：指定ディレクトリ以下の探索
     try {
