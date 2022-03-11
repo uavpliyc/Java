@@ -21,6 +21,14 @@ public class PathInterface {
     // subPathメソッド：開始から終わりまでのパスを返す(0スタート、終わり含まない)
     System.out.println("subPath: %s%n" + path.subpath(1, 3));
 
+    // FilesクラスのgetAttributeメソッド：第2引数の属性を取得
+    try {
+      long fileSize = (long)Files.getAttribute(path, "size");
+      System.out.println("Files.getAttribute: %s%n" + fileSize);
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
+
     // walkメソッド：指定ディレクトリ以下の探索
     try {
       Files.walk(path).forEach(System.out::println);
