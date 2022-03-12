@@ -2,6 +2,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.stream.Stream;
 
 public class PathInterface {
   public static void main(String[] args) {
@@ -20,6 +21,8 @@ public class PathInterface {
     System.out.println(path.getParent());
     // subPathメソッド：開始から終わりまでのパスを返す(0スタート、終わり含まない)
     System.out.println("subPath: %s%n" + path.subpath(1, 3));
+    // normalizeメソッド：パスを簡潔に
+    System.out.println(path.normalize());
 
     // FilesクラスのgetAttributeメソッド：第2引数の属性を取得
     try {
@@ -29,15 +32,19 @@ public class PathInterface {
       e.printStackTrace();
     }
 
-    // walkメソッド：指定ディレクトリ以下の探索
+    // Filesクラスのwalkメソッド：指定ディレクトリ以下の探索
     try {
       Files.walk(path).forEach(System.out::println);
     } catch (IOException e) {
       e.printStackTrace();
     }
 
-    // normalizeメソッド：パスを簡潔に
-    System.out.println(path.normalize());
+    // Filesクラスのlinesメソッド：ファイル内容をStreamオブジェクトとして取得
+    try (Stream<String> stream = Files.lines(path)) {
+      stream.forEach(System.out::println);
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
 
   }
 }
