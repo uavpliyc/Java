@@ -22,7 +22,9 @@ public class PathInterface {
     // subPathメソッド：開始から終わりまでのパスを返す(0スタート、終わり含まない)
     System.out.println("subPath: %s%n" + path.subpath(1, 3));
     // normalizeメソッド：パスを簡潔に
-    System.out.println(path.normalize());
+    System.out.println("normalize: %s%n" + path.normalize());
+    // resolveメソッド：絶対パスなら引数そのまま返す
+    System.out.println(path.resolve("resolve絶対パス： %s%n" + "/Users/user/"));
 
     // FilesクラスのgetAttributeメソッド：第2引数の属性を取得
     try {
