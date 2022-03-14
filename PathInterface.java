@@ -20,11 +20,13 @@ public class PathInterface {
     // getParentメソッド：１階層上のオブジェクト(/Users/user/Desktop)
     System.out.println(path.getParent());
     // subPathメソッド：開始から終わりまでのパスを返す(0スタート、終わり含まない)
-    System.out.println("subPath: %s%n" + path.subpath(1, 3));
+    System.out.println("subPath: " + path.subpath(1, 3));
     // normalizeメソッド：パスを簡潔に
-    System.out.println("normalize: %s%n" + path.normalize());
+    System.out.println("normalize: " + path.normalize());
     // resolveメソッド：絶対パスなら引数そのまま返す
-    System.out.println(path.resolve("resolve絶対パス： %s%n" + "/Users/user/"));
+    System.out.println("resolve絶対パス： " + path.resolve("/Users/user/"));
+    // resolveSiblingメソッド：現在の親ディレクトリからのパスに結合して返す
+    System.out.println("resolveSibling相対パス： " + path.resolveSibling("other"));
 
     // FilesクラスのgetAttributeメソッド：第2引数の属性を取得
     try {
