@@ -23,8 +23,9 @@ public class PathInterface {
     System.out.println("subPath: " + path.subpath(1, 3));
     // normalizeメソッド：パスを簡潔に
     System.out.println("normalize: " + path.normalize());
-    // resolveメソッド：絶対パスなら引数そのまま返す
+    // resolveメソッド：絶対パス→引数そのまま返す、相対パス→パス結合して返す
     System.out.println("resolve絶対パス： " + path.resolve("/Users/user/"));
+    System.out.println("resolve相対パス： " + path.resolve("other"));
     // resolveSiblingメソッド：現在の親ディレクトリからのパスに結合して返す
     System.out.println("resolveSibling相対パス： " + path.resolveSibling("other"));
 
