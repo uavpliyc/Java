@@ -26,7 +26,8 @@ public class PathInterface {
     // resolveメソッド：絶対パス→引数そのまま返す、相対パス→パス結合して返す
     System.out.println("resolve絶対パス： " + path.resolve("/Users/user/"));
     System.out.println("resolve相対パス： " + path.resolve("other"));
-    // resolveSiblingメソッド：現在の親ディレクトリからのパスに結合して返す
+    // resolveSiblingメソッド：絶対パス→引数そのまま返す、相対パス→現在の親ディレクトリからのパスに結合して返す
+    System.out.println("resolveSibling絶対パス： " + path.resolveSibling("/User/user/"));
     System.out.println("resolveSibling相対パス： " + path.resolveSibling("other"));
 
     // FilesクラスのgetAttributeメソッド：第2引数の属性を取得
