@@ -18,5 +18,8 @@ public class MapMethod {
 
     // containsKey
     System.out.println(map1.containsKey("A"));
+    // containsValue
+    System.out.println(map1.containsValue("A"));
+    System.out.println(map1.containsValue("C"));
   }
 }
