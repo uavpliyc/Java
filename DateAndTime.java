@@ -104,7 +104,9 @@ public class DateAndTime {
     System.out.println(pe);
 
     // -----------------------「DateTimeクラス」--------------------------------
-    DateTimeFormatter dFormatter = DateTimeFormatter.ofPattern("MMMM");
-    System.out.println(dFormatter.getLocale());
+    DateTimeFormatter dFormatter = DateTimeFormatter.ofPattern("yy,MM,dd");
+    System.out.println("dFormatter: " + dFormatter.getLocale());
+    // parseメソッド：第1引数String、第2引数DateTimeFormatter
+    System.out.println(LocalDate.parse("22,03,24", dFormatter));
   }
 }
