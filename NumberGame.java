@@ -7,7 +7,8 @@ public class NumberGame {
     int ans = new Random().nextInt(10);
     for ( int i = 0; i < 5; i++) {
       System.out.println("0〜9の数字を入力してください");
-      int num = new Scanner(System.in).nextInt();
+      Scanner scan = new Scanner(System.in);
+      int num = scan.nextInt();
       if (num == ans) {
         System.out.println("アタリ！");
         break;
@@ -15,6 +16,7 @@ public class NumberGame {
       else {
         System.out.println("違います");
       }
+      scan.close();
     }
     System.out.println("ゲームを終了します");
   }
