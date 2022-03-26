@@ -28,5 +28,10 @@ public class ArrayListTest {
     Iterator<Integer> iter = list.iterator();
     while(iter.hasNext())
       System.out.println(iter.next());
+
+    Iterator<Integer> iter2 = list2.iterator();
+    while(iter.hasNext())
+      System.out.println(iter2.next());
+
   }
 }
