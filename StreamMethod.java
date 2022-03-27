@@ -63,6 +63,10 @@ public class StreamMethod {
     Arrays.asList(2,3,1).stream()
     .sorted()
     .forEach(System.out::println);
+    // sortedメソッド(逆順)
+    Arrays.asList(2,3,1).stream()
+    .sorted((i,j) -> j - i)
+    .forEach(System.out::println);
 
     Stream<String> stream = Stream.of("banana","apple","orange")
     .filter(e -> e.length() > 5)
