@@ -8,4 +8,7 @@ public class GenericsClassMain {
     return t;
   };
 
+  // メソッド内でのジェネリクス(String型を子に持つ引数のみ)
+  void method2(GenericsClass<? super String> obj) {}
+
 }
