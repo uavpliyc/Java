@@ -21,5 +21,17 @@ public class MapMethod {
     // containsValue
     System.out.println(map1.containsValue("A"));
     System.out.println(map1.containsValue("C"));
+
+    Map<Integer, String> map2 = new HashMap<>();
+    map2.put(1, "first");
+    map2.put(2, "second");
+    map2.put(3, "third");
+
+    // Map.Entryインターフェース
+    for(Map.Entry<Integer, String> entry : map2.entrySet()) {
+      System.out.println(entry.getKey() + ":" + entry.getValue());
+    }
+
+
   }
 }
