@@ -32,6 +32,9 @@ public class MapMethod {
       System.out.println(entry.getKey() + ":" + entry.getValue());
     }
 
+    // キーと値を結合して出力
+    map2.forEach((k, v) -> System.out.println(k + v));
+
 
   }
 }
