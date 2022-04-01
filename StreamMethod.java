@@ -59,6 +59,15 @@ public class StreamMethod {
     // rangeClosed(終わり含む)
     IntStream.rangeClosed(1, 5).forEach(System.out::println);
 
+    // IntStreamのリダクションメソッド：データ集合を1つに要約する終端操作
+    // count
+    System.out.println("count: " + IntStream.of(1,2,3).count());
+    // sum
+    System.out.println("sum: " + IntStream.of(1,2,3).sum());
+    // average
+    System.out.println("average: " + IntStream.of(1,2,3).average());
+    System.out.println("average: " + IntStream.of(1,2,3).average().getAsDouble());
+
     // sortedメソッド(自然順)
     Arrays.asList(2,3,1).stream()
     .sorted()
