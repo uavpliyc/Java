@@ -7,6 +7,7 @@ import java.time.Period;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
+import java.time.format.FormatStyle;
 import java.time.temporal.ChronoUnit;
 import java.util.Date;
 
@@ -87,6 +88,10 @@ public class DateAndTime {
     DateTimeFormatter myFmt2 = DateTimeFormatter.ofPattern("yyyy/MM/dd");
     System.out.println(now.format(myFmt));
     System.out.println(now.format(myFmt2));
+
+    // ロケール固有のフォーマッタを返す
+    DateTimeFormatter dtfmt = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM);
+    System.out.println(now.format(dtfmt));
 
     // -----------------------「ZoneDateTimeクラス」--------------------------------
 
