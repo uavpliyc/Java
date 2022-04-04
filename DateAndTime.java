@@ -80,10 +80,12 @@ public class DateAndTime {
     DateTimeFormatter fmt2 = DateTimeFormatter.ISO_TIME;
     DateTimeFormatter fmt3 = DateTimeFormatter.ISO_DATE_TIME;
     DateTimeFormatter fmt4 = DateTimeFormatter.ISO_LOCAL_DATE;
+    DateTimeFormatter fmt5 = DateTimeFormatter.BASIC_ISO_DATE;
     System.out.println("ISO_DATE: " + fmt1.format(ofDateTime));
     System.out.println("ISO_TIME: " + fmt2.format(ofDateTime));
     System.out.println("ISO_DATE_TIME: " + fmt3.format(ofDateTime));
     System.out.println("ISO_LOCAL_DATE: " + fmt4.format(ofDateTime));
+    System.out.println("BASIC_ISO_DATE: " + fmt5.format(ofDateTime));
 
     // ofPatternメソッド：独自のフォーマット(「/」で区切る時とか)
     DateTimeFormatter myFmt = DateTimeFormatter.ofPattern("MM");
