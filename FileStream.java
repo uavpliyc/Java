@@ -11,6 +11,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class FileStream {
   public static void main(String[] args) {
@@ -68,6 +69,13 @@ public class FileStream {
           .collect(Collectors.toList())
       );
     } catch(IOException e) {
+      e.printStackTrace();
+    }
+
+    try (Stream<Path> stream = Files.list(Paths.get("/Users/user/Desktop"))) {
+      stream.filter(Files::isRegularFile)
+        .forEach(System.out::println);
+    } catch (IOException e) {
       e.printStackTrace();
     }
 
