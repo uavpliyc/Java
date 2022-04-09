@@ -6,6 +6,13 @@ public class ExecutorTest {
     Runnable task = new MyTask();
     ExecutorService execute = Executors.newScheduledThreadPool(3);
     execute.execute(task);
+    try {
+      // 3秒待機
+      Thread.sleep(3000);
+    } catch (InterruptedException e) {
+      e.printStackTrace();
+    }
+    execute.execute(task);
     // タスクの終了
     execute.shutdown();
   }
