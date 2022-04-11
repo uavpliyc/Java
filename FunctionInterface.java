@@ -17,8 +17,15 @@ public class FunctionInterface {
     void x();
   }
 
+  @FunctionalInterface
+  public interface CalcFunction<T,U> {
+    public double calculate(T num1, U num2);
+  }
+
   public static void main(String[] args) {
 
+    CalcFunction<Integer, Double> calc = (a,b) -> a * b;
+    System.out.println(calc.calculate(3, 2.5));
 
     /**
      * Functionインターフェース
@@ -84,8 +91,8 @@ public class FunctionInterface {
     System.out.println(obj1.applyAsInt("value"));
 
     // コンストラクタ参照
-    Function<String,Integer> f = Integer::new;
-    Integer i = f.apply("1");
-    System.out.println(i);
+    // Function<String,Integer> f = Integer::new;
+    // Integer i = f.apply("1");
+    // System.out.println(i);
   }
 }
