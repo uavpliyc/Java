@@ -68,6 +68,9 @@ public class FileStream {
         Files.lines(path)
           .collect(Collectors.toList())
       );
+      // readAllLinesメソッド
+        Files.readAllLines(path)
+          .forEach(System.out::println);
     } catch(IOException e) {
       e.printStackTrace();
     }
