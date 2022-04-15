@@ -82,5 +82,10 @@ public class FileStream {
       e.printStackTrace();
     }
 
+    // シンプルなStream
+    Stream.of(1,2,3,4,5)
+      .filter(s -> s > 3)
+      .forEach(System.out::println);
+
     }
 }
