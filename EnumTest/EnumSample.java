@@ -21,7 +21,13 @@ public class EnumSample {
     }
 
     // ordinalメソッド：添字表示
-    System.out.println(season.ordinal());
+    System.out.println("ordinal :" + season.ordinal());
+    // valuesメソッド
+    Season[] arr = Season.values();
+    for(Season s : arr) {
+      System.out.println("Season :" + s.toString());
+    }
+
   }
 
   protected enum Season {

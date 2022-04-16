@@ -7,7 +7,7 @@ public class ExecutorTest {
     ExecutorService execute = Executors.newScheduledThreadPool(3);
     execute.execute(task);
     try {
-      // 3秒待機
+      // 3秒たいき
       Thread.sleep(3000);
     } catch (InterruptedException e) {
       e.printStackTrace();
