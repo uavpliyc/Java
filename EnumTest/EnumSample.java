@@ -20,6 +20,12 @@ public class EnumSample {
         break;
     }
 
+    // name,toStringメソッド(列挙定数名取得)
+    System.out.println("name:" + Season.Autumn.name());
+    System.out.println("toString:" + Season.Autumn.toString());
+
+    // valueOfメソッド(列挙値取得)
+
     // ordinalメソッド：添字表示
     System.out.println("ordinal :" + season.ordinal());
     // valuesメソッド
