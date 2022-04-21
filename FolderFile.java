@@ -13,6 +13,7 @@ public class FolderFile {
     try {
       DosFileAttributes att = Files.readAttributes(path, DosFileAttributes.class);
       System.out.println(att.isDirectory());
+      System.out.println(att.isHidden());
     } catch (Exception e) {
       e.printStackTrace();
     }
