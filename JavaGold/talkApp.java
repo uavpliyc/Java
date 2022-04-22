@@ -3,7 +3,7 @@ package JavaGold;
 import java.io.Console;
 import java.io.PrintWriter;
 
-public class talkApp {
+public class talkApp extends OptionClass {
   public static void main(String[] args) {
 
     Console con = System.console();
@@ -13,6 +13,9 @@ public class talkApp {
       String str = con.readLine();
       // endと入力されたら抜ける
       if (str.equals("end")) {
+        break;
+      }
+      if (FINISH.equals(str)) {
         break;
       }
       pw.append("入力：" + str);
