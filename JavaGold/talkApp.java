@@ -10,7 +10,7 @@ public class talkApp extends OptionClass {
     PrintWriter pw = con.writer();
     while (true) {
       // readLineメソッド：Stringを返す
-      String str = con.readLine();
+      String str = con.readLine("入力：");
       // endと入力されたら抜ける
       if (str.equals("end")) {
         break;
@@ -18,7 +18,9 @@ public class talkApp extends OptionClass {
       if (FINISH.equals(str)) {
         break;
       }
-      pw.append("入力：" + str);
+      // 指定文字を追加
+      pw.append(str + '\n');
+      // ファイルやコンソールに書き込む
       pw.flush();
     }
 
