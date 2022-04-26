@@ -14,5 +14,7 @@ public class Lambda {
 
     Runnable run = () -> System.out.println("Runnable");
 
+    run.run();
+
   }
 }
