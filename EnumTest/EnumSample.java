@@ -27,6 +27,12 @@ public class EnumSample {
     // valueOfメソッド(文字列から列挙定数名取得)
     System.out.println("valueOf:" + Season.valueOf("Autumn"));
 
+    // valuesメソッド(列挙値を全て返す)
+    Season[] values = Season.values();
+    for(Season s : values){
+      System.out.println("values[" + s.ordinal()  + "]:" + s);
+    }
+
     // ordinalメソッド：添字表示
     System.out.println("ordinal :" + season.ordinal());
     // valuesメソッド
