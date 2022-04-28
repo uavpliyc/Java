@@ -23,7 +23,7 @@ public class EnumSample {
     // name,toStringメソッド(列挙定数名取得)
     System.out.println("name:" + Season.Autumn.name());
     System.out.println("toString:" + Season.Autumn.toString());
-    
+
     // valueOfメソッド(文字列から列挙定数名取得)
     System.out.println("valueOf:" + Season.valueOf("Autumn"));
 
@@ -44,6 +44,17 @@ public class EnumSample {
   }
 
   protected enum Season {
-    Spring, Summer, Autumn, Winter
+    Spring(1), Summer(2), Autumn(3), Winter(4);
+
+    private final int id;
+
+    // コンストラクタはprivateのみ
+    private Season( int id){
+      this.id = id;
+    }
+
+    public int getId(){
+      return id;
+    }
   };
 }
