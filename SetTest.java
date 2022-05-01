@@ -17,7 +17,8 @@ public class SetTest {
     set1.add("apple");
     set1.add("melon");
     set1.add("strawberry");
-    // ceiling
+    // ceiling：引数と等しいかそれより大きいものの中で最小の値を返す
     System.out.println(set1.ceiling("a"));
+
   }
 }
