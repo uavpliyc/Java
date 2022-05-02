@@ -1,4 +1,5 @@
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.TreeSet;
 
 public class SetTest {
@@ -19,6 +20,12 @@ public class SetTest {
     set1.add("strawberry");
     // ceiling：引数と等しいかそれより大きいものの中で最小の値を返す
     System.out.println(set1.ceiling("a"));
+
+    // Iteratorを使って要素取得
+    Iterator<String> iter = set1.iterator();
+    while(iter.hasNext()){
+      System.out.println(iter.next());
+    };
 
   }
 }
