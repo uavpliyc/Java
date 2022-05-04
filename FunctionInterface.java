@@ -86,6 +86,10 @@ public class FunctionInterface {
     UnaryOperator<Integer> unary = a -> a * 120;
     System.out.println(unary.apply(10));
 
+    // 基本データ型を扱う関数型インターフェース
+    IntFunction<String[]> obj3 = String[]::new;
+    System.out.println(obj3.apply(5).length);
+
     // 異なる型を引数に、基本データ型を返す関数型インターフェース
     ToIntFunction<String> obj1 = (String s) -> {return s.length();};
     System.out.println(obj1.applyAsInt("value"));
