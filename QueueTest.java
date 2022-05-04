@@ -7,8 +7,12 @@ public class QueueTest {
     // add
     q.add("test");
     q.add("test2");
+    q.add("test3");
     System.out.println(q);
     // peek：最初の要素を取得
+    System.out.println(q.peek());
+    // pool：最初の要素を削除して取得
+    System.out.println(q.poll());
     System.out.println(q.peek());
 
   }
