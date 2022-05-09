@@ -1,5 +1,6 @@
 import java.util.List;
 import java.util.Map;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -19,6 +20,10 @@ public class CollectionTest {
     Stream<Integer> st3 = Stream.of(1,5,2,9);
     // toSet
     System.out.println(st3.collect(Collectors.toSet()));
+
+    Stream<String> st4 = Stream.of("apple","melon","rice");
+    // toMap
+    System.out.println(st4.collect(Collectors.toMap(Function.identity(), String::valueOf)));
 
   }
 }
