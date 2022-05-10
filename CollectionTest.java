@@ -25,5 +25,9 @@ public class CollectionTest {
     // toMap
     System.out.println(st4.collect(Collectors.toMap(Function.identity(), String::valueOf)));
 
+    Stream<String> st5 = Stream.of("apple","melon","rice");
+    // summingInt
+    System.out.println(st5.collect(Collectors.summingInt(t -> t.length())));
+
   }
 }
