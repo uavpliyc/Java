@@ -29,5 +29,9 @@ public class CollectionTest {
     // summingInt
     System.out.println(st5.collect(Collectors.summingInt(t -> t.length())));
 
+    Stream<Integer> st6 = Stream.of(3,24,6);
+    // averagingInt
+    System.out.println(st6.collect(Collectors.averagingInt(t -> t)));
+
   }
 }
