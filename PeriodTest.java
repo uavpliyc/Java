@@ -1,5 +1,6 @@
 import java.time.Duration;
 import java.time.Period;
+import java.time.temporal.ChronoUnit;
 
 public class PeriodTest {
   public static void main(String[] args) {
@@ -12,6 +13,9 @@ public class PeriodTest {
 
     Duration d1 = Duration.ofDays(1);
     System.out.println("ofDays：" + d1);
+
+    Duration d2 = Duration.of(1, ChronoUnit.SECONDS);
+    System.out.println("of：" + d2);
 
   }
 }
