@@ -6,9 +6,11 @@ public class SystemTest {
   public static void main(String[] args) throws IOException {
     
     try (
+      // InputStream
       BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     ) {
       String s = br.readLine();
+      // PrintStream
       System.out.println("input:" + s);
     } catch (Exception e) {
       e.printStackTrace();
