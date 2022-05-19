@@ -57,6 +57,9 @@ public class FileStream {
       System.out.println(br.readLine());
       // markメソッド：現在の位置をマークする(そこからn文字までが読み取り限度)
       br.mark(3);
+      System.out.println(br.readLine());
+      // resetメソッド：mark位置に戻す
+      br.reset();
     } catch (IOException e) {
       e.printStackTrace();
     }
