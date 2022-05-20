@@ -60,6 +60,8 @@ public class FileStream {
       System.out.println(br.readLine());
       // resetメソッド：mark位置に戻す
       br.reset();
+      // readメソッド
+      System.out.println(br.read());
     } catch (IOException e) {
       e.printStackTrace();
     }
