@@ -16,5 +16,7 @@ public class SystemTest {
       e.printStackTrace();
     }
 
+    System.err.println("error");
+
   }
 }
