@@ -4,10 +4,13 @@ public class ThreadClass {
     // スレッド作成
     ThreadA a = new ThreadA();
     ThreadB b = new ThreadB();
+    ThreadC c = new ThreadC();
 
     // スレッド実行開始
     a.start();
     b.start();
+    Thread t = new Thread(c);
+    t.start();
   }
 }
 
@@ -23,10 +26,19 @@ class ThreadA extends Thread {
     }
   }
 }
+
 class ThreadB extends Thread {
   public void run(){
     for (int i = 0; i < 10; i++){
       System.out.println("B:" + i + "");
+    }
+  }
+}
+
+class ThreadC implements Runnable {
+  public void run(){
+    for (int i = 0; i < 10; i++){
+      System.out.println("C:" + i + "");
     }
   }
 }
