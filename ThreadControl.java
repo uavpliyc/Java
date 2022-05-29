@@ -12,12 +12,12 @@ public class ThreadControl {
 class Share {
   private int a = 0;
   private String b;
-  public void set(){
+  public synchronized void set(){
     a++;
     b = "data";
     System.out.println("set a:" + a + "b: " + b);
   }
-  public void print(){
+  public synchronized void print(){
     a--;
     b = null;
     System.out.println("print a:" + a + "b: " + b);
