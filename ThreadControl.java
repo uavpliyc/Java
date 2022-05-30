@@ -13,11 +13,27 @@ class Share {
   private int a = 0;
   private String b;
   public synchronized void set(){
+    // wait
+    while(a != 0){
+      try{
+        wait();
+      }catch(InterruptedException e){
+      }
+    }
+    // notify
+    notify();
     a++;
     b = "data";
     System.out.println("set a:" + a + "b: " + b);
   }
   public synchronized void print(){
+    while(b == null){
+      try{
+        wait();
+      } catch(InterruptedException e){
+      }
+    }
+    notify();
     a--;
     b = null;
     System.out.println("print a:" + a + "b: " + b);
