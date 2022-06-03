@@ -7,7 +7,10 @@ public class Atomic {
     // int[] num2 = {0};
     IntStream.iterate(1, i -> 1).limit(100).parallel().forEach(i -> num1.incrementAndGet());
     System.out.println(num1);
-
+    
+    AtomicInteger num2 = new AtomicInteger(0);
+    IntStream.iterate(1, i -> 1).limit(100).parallel().forEach(i -> num2.getAndIncrement());
+    System.out.println(num2);
     
   }
 }
