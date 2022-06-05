@@ -1,6 +1,5 @@
 import java.util.Locale;
 import java.util.ResourceBundle;
-import java.util.Set;
 
 public class LocaleObject {
   public static void main(String[] args) {
@@ -21,16 +20,18 @@ public class LocaleObject {
     // リソースバンドル(拡張for文)
     for (Locale locale : locArray) {
       ResourceBundle obj = ResourceBundle.getBundle("MyResources", locale);
-      System.out.println(obj.getString("send"));
-      System.out.println(obj.getString("cancel"));
+      Integer data = (Integer)obj.getObject("intData");
+      System.out.println("intData：" + data);
+      System.out.println("send：" + obj.getString("send"));
+      System.out.println("cancel：" + obj.getString("cancel"));
     }
 
-    ResourceBundle obj = ResourceBundle.getBundle("MyResources");
-    // リソースバンドル(keySet)
-    Set<String> keys = obj.keySet();
-    keys.stream()
-      .map(k -> obj.getString(k))
-      .forEach(System.out::println);
+    // ResourceBundle obj = ResourceBundle.getBundle("MyResources");
+    // // リソースバンドル(keySet)
+    // Set<String> keys = obj.keySet();
+    // keys.stream()
+    //   .map(k -> obj.getString(k))
+    //   .forEach(System.out::println);
 
   }
 }
