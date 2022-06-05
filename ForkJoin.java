@@ -11,6 +11,7 @@ public class ForkJoin {
   }
 }
 
+// RecursiveActionかRecursiveTaskを継承
 class ExamRecursiveAction extends RecursiveAction {
   private Double[] nums;
   private int start;
