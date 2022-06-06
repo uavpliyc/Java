@@ -20,18 +20,12 @@ public class LocaleObject {
     // リソースバンドル(拡張for文)
     for (Locale locale : locArray) {
       ResourceBundle obj = ResourceBundle.getBundle("MyResources", locale);
+      // String型以外はgetObjectで取得し、キャストが必要
       Integer data = (Integer)obj.getObject("intData");
       System.out.println("intData：" + data);
       System.out.println("send：" + obj.getString("send"));
       System.out.println("cancel：" + obj.getString("cancel"));
     }
-
-    // ResourceBundle obj = ResourceBundle.getBundle("MyResources");
-    // // リソースバンドル(keySet)
-    // Set<String> keys = obj.keySet();
-    // keys.stream()
-    //   .map(k -> obj.getString(k))
-    //   .forEach(System.out::println);
 
   }
 }
