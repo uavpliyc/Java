@@ -57,6 +57,6 @@ public class Format {
   public static void customFormat(String pattern, double val) {
     DecimalFormat df = new DecimalFormat(pattern);
     String data = df.format(val);
-    System.out.println(data);
+    System.out.println("(" + pattern + "," + val + "):" + data);
   }
 }
