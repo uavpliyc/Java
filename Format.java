@@ -38,6 +38,7 @@ public class Format {
     System.out.println(localDate.getDayOfYear() + "/365");
     System.out.println(localDate.getDayOfMonth());
     System.out.println(localDate.getDayOfWeek());
+    System.out.println("getMonth: " + localDate.getMonth());
 
     // ofLocalizedDateメソッド(/区切りになる)
     DateTimeFormatter fmt2 = DateTimeFormatter.ofLocalizedDate(FormatStyle.MEDIUM);
