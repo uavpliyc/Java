@@ -35,9 +35,9 @@ public class Format {
     customFormat("000.0", 12.3);
 
     LocalDate localDate = LocalDate.of(2022, 2, 15);
-    System.out.println(localDate.getDayOfYear() + "/365");
-    System.out.println(localDate.getDayOfMonth());
-    System.out.println(localDate.getDayOfWeek());
+    System.out.println("getDayOfYear : " + localDate.getDayOfYear() + "/365");
+    System.out.println("getDayOfMonth :" + localDate.getDayOfMonth());
+    System.out.println("getDayOfWeek: " + localDate.getDayOfWeek());
     System.out.println("getMonth: " + localDate.getMonth());
 
     // ofLocalizedDateメソッド(/区切りになる)
