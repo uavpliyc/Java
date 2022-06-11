@@ -39,6 +39,7 @@ public class Format {
     System.out.println("getDayOfMonth :" + localDate.getDayOfMonth());
     System.out.println("getDayOfWeek: " + localDate.getDayOfWeek());
     System.out.println("getMonth: " + localDate.getMonth());
+    System.out.println("getMonthValue: " + localDate.getMonthValue());
 
     // ofLocalizedDateメソッド(/区切りになる)
     DateTimeFormatter fmt2 = DateTimeFormatter.ofLocalizedDate(FormatStyle.MEDIUM);
