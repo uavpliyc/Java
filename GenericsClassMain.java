@@ -11,4 +11,9 @@ public class GenericsClassMain {
   // メソッド内でのジェネリクス(String型を子に持つ引数のみ)
   void method2(GenericsClass<? super String> obj) {}
 
+  GenericsClass<Integer> gc2 = new GenericsClass<>();
+  public GenericsClass<Integer> getGc2() {
+    return gc2;
+  }
+
 }

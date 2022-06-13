@@ -8,4 +8,8 @@ public class GenericsClass<T> {
       return null;
     }
 
+    public void set(T t){
+      this.t = t;
+    }
+
 }
