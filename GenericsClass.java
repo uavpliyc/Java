@@ -4,6 +4,9 @@ public class GenericsClass<T> {
 
     T t;
 
+    // staticメンバに型パラメータはコンパイルエラー
+    // static T val;
+
     List<T> method() {
       return null;
     }
