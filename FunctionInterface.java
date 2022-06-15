@@ -98,5 +98,9 @@ public class FunctionInterface {
     // Function<String,Integer> f = Integer::new;
     // Integer i = f.apply("1");
     // System.out.println(i);
+    String str = "test";
+    Function<String,Integer> f = str::indexOf;
+    Integer i = f.apply("aaa");
+    System.out.println(i);
   }
 }
