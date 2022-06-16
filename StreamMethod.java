@@ -47,6 +47,8 @@ public class StreamMethod {
     c.stream().flatMap(e -> e.stream())
     .map(e -> e + 1).forEach(System.out::println);
 
+    c.stream().flatMap(e -> e.stream()).forEach(s -> System.out.println(s + " "));
+
     String[] values = {"age", "name", "sample"};
     List<String> list = Arrays.asList(values);
     // Optional型を返す ×String型
