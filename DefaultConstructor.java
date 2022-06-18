@@ -9,4 +9,9 @@ public class DefaultConstructor {
   public DefaultConstructor(){
     this(0, 0);
   }
+
+  public void get(){
+    System.out.println("x:" + x + " " + "y:" + y);
+  }
+
 }
