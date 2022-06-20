@@ -1,10 +1,10 @@
 public class StringSample {
   public static void main(String[] args){
-    String str1 = "helloworld"; //100
-    String str2 = "hello";  //200 GC
-    str2 = str2 + "world";  //300
-    String str3 = new String("helloworld");  //400
-    String str4 = "helloworld";  //100
+    String str1 = "HelloWorld"; //100
+    String str2 = "Hello";  //200 GC
+    str2 = str2 + "World";  //300
+    String str3 = new String("HelloWorld");  //400
+    String str4 = "HelloWorld";  //100
 
     System.out.println(str1);
     System.out.println(str2);
