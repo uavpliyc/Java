@@ -40,8 +40,8 @@ public class FunctionInterface {
      * @param T,U
      * @return R
      */
-    BiFunction<Integer,Integer,Integer> bifunc = (a,b) -> a * b;
-    System.out.println(bifunc.apply(10, 10));
+    BiFunction<Integer,Integer,Integer> biFunc = (a,b) -> a * b;
+    System.out.println(biFunc.apply(10, 10));
 
     /**
      * Consumerインターフェース
@@ -54,8 +54,8 @@ public class FunctionInterface {
      * BiConsumerインターフェース
      * @param T,U
      */
-    BiConsumer<Integer,Integer> bicon = (a,b) -> System.out.println("BiConsumer");
-    bicon.accept(10, 100);
+    BiConsumer<Integer,Integer> biCon = (a,b) -> System.out.println("BiConsumer");
+    biCon.accept(10, 100);
 
     /**
      * Predicateインターフェース
@@ -95,9 +95,6 @@ public class FunctionInterface {
     System.out.println(obj1.applyAsInt("value"));
 
     // コンストラクタ参照
-    // Function<String,Integer> f = Integer::new;
-    // Integer i = f.apply("1");
-    // System.out.println(i);
     String str = "test";
     Function<String,Integer> f = str::indexOf;
     Integer i = f.apply("aaa");
