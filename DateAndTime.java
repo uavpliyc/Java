@@ -54,6 +54,8 @@ public class DateAndTime {
     long days = ChronoUnit.DAYS.between(start, end);
     System.out.println("ChronoUnit:" + days);
 
+    System.out.println("minusDays: " + start.minusDays(2));
+
     // -----------------------「LocalTimeクラス」--------------------------------
 
     LocalTime nowTime = LocalTime.now();
