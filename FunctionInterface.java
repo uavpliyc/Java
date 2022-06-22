@@ -3,10 +3,12 @@ import java.util.function.BiFunction;
 import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.IntFunction;
+import java.util.function.IntUnaryOperator;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
 import java.util.function.ToIntFunction;
 import java.util.function.UnaryOperator;
+import java.util.stream.IntStream;
 
 public class FunctionInterface {
 
@@ -99,5 +101,10 @@ public class FunctionInterface {
     Function<String,Integer> f = str::indexOf;
     Integer i = f.apply("aaa");
     System.out.println(i);
+
+    IntStream s1 = IntStream.of(1,2,3);
+    IntFunction<IntUnaryOperator> func2 = x -> y -> x + y;
+    IntStream s2 = s1.map(func2.apply(1));
+    s2.forEach(System.out::println);
   }
 }
