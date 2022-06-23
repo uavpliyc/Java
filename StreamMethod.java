@@ -86,5 +86,9 @@ public class StreamMethod {
     .peek(e -> System.out.println(e + " "));
     stream.forEach(System.out::println);
 
+    Stream<List<String>> s1 = Stream.of(Arrays.asList("1", "Bill"), Arrays.asList("2", null));
+    Stream<String> s2 = s1.flatMap((x) -> x.stream());
+    s2.forEach(System.out::println);
+
   }
 }
