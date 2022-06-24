@@ -1,5 +1,6 @@
 import java.util.HashMap;
 import java.util.Map;
+import java.util.TreeMap;
 
 public class MapMethod {
   public static void main(String[] args) {
@@ -34,6 +35,12 @@ public class MapMethod {
 
     // キーと値を結合して出力
     map2.forEach((k, v) -> System.out.println(k + v));
+
+    Map<Integer, String> items = new TreeMap<>();
+    items.put(11, "String");
+    items.put(32, "value");
+    items.put(90, "String");
+    System.out.println(items);
 
 
   }
