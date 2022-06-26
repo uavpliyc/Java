@@ -36,11 +36,11 @@ public class MapMethod {
     // キーと値を結合して出力
     map2.forEach((k, v) -> System.out.println(k + v));
 
-    // TreeMap
+    // TreeMap(自然順で並び替えてくれる)
     Map<Integer, String> items = new TreeMap<>();
     items.put(11, "String");
-    items.put(32, "value");
     items.put(90, "String");
+    items.put(32, "value");
     System.out.println(items);
 
 
