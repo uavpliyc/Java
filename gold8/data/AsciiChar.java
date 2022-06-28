@@ -50,7 +50,8 @@ public enum AsciiChar {
     public List<Character> getCharList() {
         return IntStream.range(0, codeList.size())
                 .mapToObj(i -> IntStream.rangeClosed(codeList.get(i).getFirst(), codeList.get(i).getLast())
-                        .mapToObj(charCode -> new Character((char) charCode))
+                        // .mapToObj(charCode -> new Character((char) charCode))
+                        .mapToObj(charCode -> Character.valueOf((char) charCode))
                         .collect(Collectors.toList()))
                 .flatMap(charList -> charList.stream())
                 .collect(Collectors.toList());
