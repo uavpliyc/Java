@@ -106,7 +106,7 @@ public class TestMain {
 
         Integer[] integerArr = new Integer[1];
         integerArr[0] = 0;
-        Integer integer = new Integer(1);
+        Integer integer = 1;
         jobs.put("Integer型の加算", () -> Math.addExact(integerArr[0], integer));
 
         String[] strArr = new String[1];
