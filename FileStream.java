@@ -61,7 +61,10 @@ public class FileStream {
       // resetメソッド：mark位置に戻す
       br.reset();
       // readメソッド
-      System.out.println(br.read());
+      int i = br.read();
+      System.out.println((char)i);
+      // どっちでも可
+      // System.out.println(br.read());
     } catch (IOException e) {
       e.printStackTrace();
     }
