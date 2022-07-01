@@ -4,7 +4,7 @@ import java.io.InputStreamReader;
 
 public class SystemTest {
   public static void main(String[] args) throws IOException {
-    
+
     try (
       // InputStream
       BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -16,6 +16,7 @@ public class SystemTest {
       e.printStackTrace();
     }
 
+    // err
     System.err.println("error");
 
   }
