@@ -3,6 +3,8 @@ public enum StopLight2 {
 
   // コンストラクタ(publicだとコンパイルエラー)
   private StopLight2(String s) {
+    this.s = s;
+   }
 
-  }
+  private String s;
 }
