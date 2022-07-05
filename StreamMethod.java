@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
@@ -89,6 +90,10 @@ public class StreamMethod {
     Stream<List<String>> s1 = Stream.of(Arrays.asList("1", "Bill"), Arrays.asList("2", null));
     Stream<String> s2 = s1.flatMap((x) -> x.stream());
     s2.forEach(System.out::println);
+
+    // minメソッド
+    Stream<Integer> s = Arrays.asList(7,3,8).stream();
+    System.out.println(s.min(Comparator.comparing(n -> n)).get());
 
   }
 }
