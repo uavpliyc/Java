@@ -93,7 +93,10 @@ public class StreamMethod {
 
     // minメソッド
     Stream<Integer> s = Arrays.asList(7,3,8).stream();
-    System.out.println(s.min(Comparator.comparing(n -> n)).get());
+    System.out.println("min:" + s.min(Comparator.comparing(n -> n)).get());
+    // maxメソッド
+    Stream<Integer> ss = Arrays.asList(7,3,8).stream();
+    System.out.println("max:" + ss.max(Comparator.comparing(n -> n)).get());
 
   }
 }
