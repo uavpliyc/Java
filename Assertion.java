@@ -5,5 +5,7 @@ public class Assertion {
     assert (price > 0) : ("priceは0より大きくしてください");
     // ()なしでも可能
     assert price > 0;
+    // 最初のアサーションでストップした場合はここまで辿り着かない
+    assert false : ("false");
   }
 }
