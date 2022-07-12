@@ -12,6 +12,7 @@ public class PredicateTest {
       return result;
     };
 
+    // filterの引数に渡す
     list.stream().filter(p).findFirst().ifPresent(System.out::println);
   }
 }
