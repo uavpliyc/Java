@@ -3,6 +3,7 @@ import java.io.PrintWriter;
 
 public class ConsoleObject {
   public static void main(String[] args) {
+    // これでconsoleオブジェクト取得
     Console con = System.console();
     PrintWriter pw = con.writer();
     while (true) {
