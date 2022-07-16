@@ -33,7 +33,7 @@ public class EnumSample {
       System.out.println("values[" + s.ordinal()  + "]:" + s);
     }
 
-    // ordinalメソッド：添字表示
+    // ordinalメソッド：添字表示(0スタート)
     System.out.println("ordinal :" + season.ordinal());
     // valuesメソッド
     Season[] arr = Season.values();
