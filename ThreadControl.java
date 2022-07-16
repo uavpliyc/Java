@@ -3,6 +3,7 @@ public class ThreadControl {
     Share share = new Share();
     Thread1 thread1 = new Thread1(share);
     Thread2 thread2 = new Thread2(share);
+    // startでrunが呼び出される
     thread1.start();
     thread2.start();
   }
