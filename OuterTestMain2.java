@@ -1,6 +1,7 @@
 public class OuterTestMain2 {
   public static void main(String[] args) {
 
+    // インターフェース.インナークラス.staticメソッド
     OuterTest2.Inner1.doIt();
 
     new OuterTest2(){
