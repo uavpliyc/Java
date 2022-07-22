@@ -16,4 +16,5 @@ interface ImplementsTest {
   default void test(){
     System.out.println("Implements");
   };
+  void test2();
 }
