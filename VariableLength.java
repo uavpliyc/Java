@@ -12,7 +12,7 @@ public class VariableLength {
 }
 
 class VaLe {
-  // 可変長引数
+  // 可変長引数(引数の最後に記載)
   public void method(String s, int... i){
     System.out.println(s + "サイズ：" + i.length);
     for(int i2 : i){
