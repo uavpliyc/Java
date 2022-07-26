@@ -52,7 +52,7 @@ public class StreamMethod {
 
     String[] values = {"age", "name", "sample"};
     List<String> list = Arrays.asList(values);
-    // Optional型を返す ×String型
+    // findFirstメソッド：Optional型を返す ※String型ではない
     Optional<String> str = list.stream().filter(s -> s.length() > 3).findFirst();
     System.out.println(str);
     System.out.println(str.get());
