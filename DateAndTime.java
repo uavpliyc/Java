@@ -15,7 +15,7 @@ public class DateAndTime {
   public static void main(String[] args) {
     //コンストラクタがprivateなのでインスタンス生成はできない
 
-    // java.timeパッケージ2つの列挙型
+    // java.timeパッケージ2つの列挙型(MONDAY〜SUNDAYとJANUARY〜DECEMBER)
     for (DayOfWeek dayOfWeek : DayOfWeek.values()) {
       System.out.println(dayOfWeek);
     }
