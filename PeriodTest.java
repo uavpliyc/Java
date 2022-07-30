@@ -22,6 +22,8 @@ public class PeriodTest {
     System.out.println("of：" + d3);
     Duration d4 = Duration.of(1, ChronoUnit.HOURS);
     System.out.println("of：" + d4);
+    Duration d5 = Duration.of(1, ChronoUnit.NANOS);
+    System.out.println("of：" + d5);
 
   }
 }
