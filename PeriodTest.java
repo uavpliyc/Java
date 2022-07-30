@@ -20,6 +20,8 @@ public class PeriodTest {
     System.out.println("of：" + d2);
     Duration d3 = Duration.of(1, ChronoUnit.MILLIS);
     System.out.println("of：" + d3);
+    Duration d4 = Duration.of(1, ChronoUnit.HOURS);
+    System.out.println("of：" + d4);
 
   }
 }
