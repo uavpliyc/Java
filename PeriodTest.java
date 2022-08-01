@@ -8,6 +8,8 @@ public class PeriodTest {
     // Period：年月日
     Period p1 = Period.ofYears(3);
     System.out.println("ofYears：" + p1);
+    Period p3 = Period.ofMonths(3);
+    System.out.println("ofMonths：" + p3);
 
     Period p2 = Period.of(0, 10, 50);
     System.out.println("of：" + p2);
