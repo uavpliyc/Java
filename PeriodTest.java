@@ -10,6 +10,8 @@ public class PeriodTest {
     System.out.println("ofYears：" + p1);
     Period p3 = Period.ofMonths(3);
     System.out.println("ofMonths：" + p3);
+    Period p4 = Period.ofWeeks(3);
+    System.out.println("ofWeeks：" + p4);
 
     Period p2 = Period.of(0, 10, 50);
     System.out.println("of：" + p2);
