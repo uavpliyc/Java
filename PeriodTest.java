@@ -15,6 +15,8 @@ public class PeriodTest {
 
     Period p2 = Period.of(0, 10, 50);
     System.out.println("of：" + p2);
+    Period p6 = Period.of(1, 10, 50);
+    System.out.println("of：" + p6);
 
     // Duration：時分秒
     Duration d1 = Duration.ofDays(1);
