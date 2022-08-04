@@ -13,6 +13,7 @@ public class PeriodTest {
     Period p4 = Period.ofWeeks(3);
     System.out.println("ofWeeks：" + p4);
 
+    // 0は表示されない
     Period p2 = Period.of(0, 10, 50);
     System.out.println("of：" + p2);
     Period p6 = Period.of(1, 10, 50);
