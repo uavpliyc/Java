@@ -44,5 +44,8 @@ public class Array{
     for(int i = 0; i < list.size(); i++) {
       System.out.println(list.get(i));
     }
+
+    Arrays.stream(new int[] {1,2,3,4,5}).filter( e -> e < 3 ).forEach(System.out::print);
+
   }
 }
