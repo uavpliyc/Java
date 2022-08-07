@@ -98,5 +98,11 @@ public class StreamMethod {
     Stream<Integer> ss = Arrays.asList(7,3,8).stream();
     System.out.println("max:" + ss.max(Comparator.comparing(n -> n)).get());
 
+    Stream<String> stream10 = Arrays.asList("orange", "apple", "banana").stream()
+        .filter(e -> e.length() < 6)
+        .map(String::toUpperCase)
+        .peek(System.out::println);
+    System.out.print(stream10.findFirst().get());
+
   }
 }
