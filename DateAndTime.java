@@ -9,6 +9,7 @@ import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
 import java.time.temporal.ChronoUnit;
+import java.time.temporal.Temporal;
 import java.util.Date;
 
 public class DateAndTime {
@@ -53,6 +54,10 @@ public class DateAndTime {
     // TemporalUnitインターフェースの実装クラスChronoUnitのbetweenメソッド
     long days = ChronoUnit.DAYS.between(start, end);
     System.out.println("ChronoUnit:" + days);
+
+    // addTo
+    Temporal t = ChronoUnit.DAYS.addTo(start, 5);
+    System.out.println(t);
 
     System.out.println("minusDays: " + start.minusDays(2));
 
