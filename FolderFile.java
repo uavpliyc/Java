@@ -19,6 +19,8 @@ public class FolderFile {
       DosFileAttributes att = Files.readAttributes(path2, DosFileAttributes.class);
       System.out.println(att.isDirectory());
       System.out.println(att.isHidden());
+      String s = file.getAbsolutePath();
+      System.out.println(s);
     } catch (Exception e) {
       e.printStackTrace();
     }
