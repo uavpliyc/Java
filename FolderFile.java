@@ -21,6 +21,8 @@ public class FolderFile {
       System.out.println(att.isHidden());
       String s = file.getAbsolutePath();
       System.out.println(s);
+      String s1 = file.getName();
+      System.out.println(s1);
     } catch (Exception e) {
       e.printStackTrace();
     }
