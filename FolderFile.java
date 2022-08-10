@@ -23,6 +23,8 @@ public class FolderFile {
       System.out.println(s);
       String s1 = file.getName();
       System.out.println(s1);
+      boolean s2 = file.isFile();
+      System.out.println(s2);
     } catch (Exception e) {
       e.printStackTrace();
     }
