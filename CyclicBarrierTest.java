@@ -13,6 +13,8 @@ public class CyclicBarrierTest {
         Thread.sleep((int)(Math.random() * 5000));
         System.out.println(threadName + ": waiting...");
         barrier.await();
+        boolean b = barrier.isBroken();
+        System.out.println("barrier : " + b);
       } catch (InterruptedException | BrokenBarrierException e) {
         e.printStackTrace();
       }
