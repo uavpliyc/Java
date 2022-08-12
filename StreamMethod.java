@@ -104,5 +104,11 @@ public class StreamMethod {
         .peek(System.out::println);
     System.out.print(stream10.findFirst().get());
 
+    // sequential
+    Arrays.asList("a","b","c").parallelStream()
+    .map(String::toUpperCase)
+    .sequential()
+    .forEach(System.out::println);
+
   }
 }
