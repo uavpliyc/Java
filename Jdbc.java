@@ -10,13 +10,15 @@ public class Jdbc {
         Statement stmt = con.createStatement();
         // boolean result1 = stmt.execute(sql);
         // int result2 = stmt.executeUpdate(sql);
-        ResultSet rs = stmt.executeQuery(sql)
+        ResultSet rs = stmt.executeQuery(sql);
         ) {
           // executeQueryはnullを返さない(空のResultSetを返す)
           if (rs != null) System.out.println("rs != null!");
           if (rs.next()) {
             System.out.println(rs.getString(1));
           }
+          // getMetaData
+          System.out.println(rs.getMetaData());
         } catch (SQLException e) {
           e.printStackTrace();
         }
