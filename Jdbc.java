@@ -8,7 +8,6 @@ public class Jdbc {
     String sql = "SELECT name FROM department";
     try (Connection con = DbConnector.getConnect();
         Statement stmt = con.createStatement();
-        // boolean result1 = stmt.execute(sql);
         // int result2 = stmt.executeUpdate(sql);
         ResultSet rs = stmt.executeQuery(sql);
         ) {
@@ -17,6 +16,8 @@ public class Jdbc {
           if (rs.next()) {
             System.out.println(rs.getString(1));
           }
+          boolean result1 = stmt.execute(sql);
+          System.out.println(result1);
           // getMetaData
           System.out.println(rs.getMetaData());
         } catch (SQLException e) {
