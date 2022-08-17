@@ -15,6 +15,7 @@ public class Jdbc {
           if (rs.next()) {
             System.out.println(rs.getString(1));
           }
+          // execute：SELECT以外false返す
           boolean result1 = stmt.execute(sql);
           int result2 = stmt.executeUpdate(sql);
           System.out.println(result1);
