@@ -13,7 +13,8 @@ public class Jdbc {
         ) {
           if (rs != null) System.out.println("rs != null!");
           if (rs.next()) {
-            System.out.println(rs.getString(1));
+            System.out.println(rs.getInt(1));
+            System.out.println(rs.getString(2));
           }
           // execute：SELECT以外false返す
           boolean result1 = stmt.execute(sql);
