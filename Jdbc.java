@@ -13,6 +13,7 @@ public class Jdbc {
         ) {
           if (rs != null) System.out.println("rs != null!");
           if (rs.next()) {
+            // 列インデックス(1スタート)を引数に指定
             System.out.println(rs.getInt(1));
             System.out.println(rs.getString(2));
           }
