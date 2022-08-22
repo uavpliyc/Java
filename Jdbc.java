@@ -16,6 +16,8 @@ public class Jdbc {
             // 列インデックス(1スタート)を引数に指定
             System.out.println(rs.getInt(1));
             System.out.println(rs.getString(2));
+            // moveToInsertRow：DBに反映させるため移動
+            rs.moveToInsertRow();
           }
           // execute：SELECT以外false返す
           boolean result1 = stmt.execute(sql);
