@@ -18,6 +18,7 @@ public class Jdbc {
             System.out.println(rs.getString(2));
             // moveToInsertRow：DBに反映させるため移動
             rs.moveToInsertRow();
+            rs.insertRow();
           }
           // execute：SELECT以外false返す
           boolean result1 = stmt.execute(sql);
