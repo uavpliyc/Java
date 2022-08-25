@@ -12,6 +12,8 @@ public class PeriodTest {
     System.out.println("ofMonths：" + p3);
     Period p4 = Period.ofWeeks(3);
     System.out.println("ofWeeks：" + p4);
+    // ofで繋げると最後のみ反映
+    // Period p5 = Period.ofYears(3).ofMonths(1);
 
     // 0は表示されない
     Period p2 = Period.of(0, 10, 50);
