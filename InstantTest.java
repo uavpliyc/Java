@@ -14,6 +14,7 @@ public class InstantTest {
     System.out.println(Instant.now().toEpochMilli());
 
     System.out.println("ofEpochMilli(1000):" + Instant.ofEpochMilli(1000));
+    System.out.println("ofEpochSecond(2000):" + Instant.ofEpochSecond(2000));
 
     // ZoneDateTimeなら引数不要、LocalDateTimeならZoneOffset引数が必要
     System.out.println(ZonedDateTime.now().toInstant());
