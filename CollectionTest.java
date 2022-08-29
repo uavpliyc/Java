@@ -1,3 +1,5 @@
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Function;
@@ -32,6 +34,9 @@ public class CollectionTest {
     Stream<Integer> st6 = Stream.of(3,24,6);
     // averagingInt
     System.out.println(st6.collect(Collectors.averagingInt(t -> t)));
+
+    List<Integer> array = Arrays.asList(4,6,2,64,1,44);
+    System.out.println(Collections.binarySearch(array, 64));
 
   }
 }
