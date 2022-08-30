@@ -36,6 +36,8 @@ public class CollectionTest {
     System.out.println(st6.collect(Collectors.averagingInt(t -> t)));
 
     List<Integer> array = Arrays.asList(4,6,2,64,1,44);
+    
+    // binarySearch(ソートせずにそのままだと誤った結果返す)
     System.out.println(Collections.binarySearch(array, 64));
 
   }
