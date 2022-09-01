@@ -40,6 +40,7 @@ public class CollectionTest {
     // binarySearch(ソートせずにそのままだと誤った結果返す)
     System.out.println("ソード前：" + Collections.binarySearch(array, 64));
     Collections.sort(array);
+    System.out.println("ソード後：" + Collections.binarySearch(array, 64));
 
   }
 }
