@@ -38,9 +38,9 @@ public class CollectionTest {
     List<Integer> array = Arrays.asList(4,6,2,64,1,44);
     
     // binarySearch(ソートせずにそのままだと誤った結果返す)
-    System.out.println("ソード前：" + Collections.binarySearch(array, 64));
+    System.out.println("ソート前：" + Collections.binarySearch(array, 64));
     Collections.sort(array);
-    System.out.println("ソード後：" + Collections.binarySearch(array, 64));
+    System.out.println("ソート後：" + Collections.binarySearch(array, 64));
 
   }
 }
