@@ -110,5 +110,9 @@ public class StreamMethod {
     .sequential()
     .forEach(System.out::println);
 
+    Stream.generate(() -> 0)
+    .limit(3)
+    .forEach(System.out::println);
+
   }
 }
