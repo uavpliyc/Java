@@ -54,11 +54,12 @@ public class StreamMethod {
     List<String> list = Arrays.asList(values);
     // findFirstメソッド：Optional型を返す ※String型ではない
     Optional<String> str = list.stream().filter(s -> s.length() > 3).findFirst();
-    System.out.println(str);
-    System.out.println(str.get());
+    System.out.println("str:" + str);
+    System.out.println("str.get():" + str.get());
 
     // range(終わり含まない)
     IntStream.range(1, 5).forEach(System.out::println);
+    IntStream.range(5, 1).forEach(System.out::println); //何も表示しない
     // rangeClosed(終わり含む)
     IntStream.rangeClosed(1, 5).forEach(System.out::println);
 
