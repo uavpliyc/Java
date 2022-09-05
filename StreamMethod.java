@@ -115,5 +115,9 @@ public class StreamMethod {
     .limit(3)
     .forEach(System.out::println);
 
+    Stream.iterate(0, i -> i++)
+    .limit(3)
+    .forEach(System.out::println);
+
   }
 }
