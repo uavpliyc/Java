@@ -55,14 +55,16 @@ public class Logging {
     }
 
     /**
-     * プログラムからの出力(ファイルに書き込み)
+     * 課題1-1：プログラムからの出力(ファイルに書き込み)
      */
     public static void outputToLog() {
 
         File file = new File(Logging.getProperty("OutputDirectory") + Logging.getProperty("LogFileName") + "-" + now.toString() + ".log");
 
         try (
+            // バイト単位でデータ書き込み（trueで追記）
             FileOutputStream fos = new FileOutputStream(file, true);
+            // 文字コード指定
             OutputStreamWriter osw = new OutputStreamWriter(fos, Logging.getProperty("CharacterCode"));
             ) {
             osw.write(now.format(DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss")));
@@ -74,10 +76,11 @@ public class Logging {
     }
 
     /**
-     * プログラムへの入力(ファイル読み込み)
+     * 課題1-2：プログラムへの入力(ファイル読み込み、コンソールに出力)
      */
-    public static void inputFromFile() {
-        try (FileInputStream fis = new FileInputStream("/Users/user/Desktop/JavaGold/Task1.txt");
+    public static void inputFromFile(File file) {
+        try (
+            FileInputStream fis = new FileInputStream(file);
             InputStreamReader isr = new InputStreamReader(fis, Logging.getProperty("CharacterCode"));
             BufferedReader br = new BufferedReader(isr);) {
             String text;
@@ -88,6 +91,62 @@ public class Logging {
             System.out.println("ファイルがありません");
         } catch (IOException e) {
             System.out.println("IO Error");
+        }
+    }
+
+    // 課題1-3：データファイルを読み込み、編集してファイルに出力する
+    public static void ReadAndWriteLog(File file){
+        File logFile = new File(Logging.getProperty("OutputDirectory") + Logging.getProperty("LogFileName") + "-" + now.toString() + ".log");
+        try (
+            // 読み込み
+            FileInputStream fis = new FileInputStream(file);
+            InputStreamReader isr = new InputStreamReader(fis, Logging.getProperty("CharacterCode"));
+            BufferedReader br = new BufferedReader(isr);
+            // ログファイルへ書き込み
+            FileOutputStream fos = new FileOutputStream(logFile, true);
+            OutputStreamWriter osw = new OutputStreamWriter(fos, Logging.getProperty("CharacterCode"));
+            ) {
+                String text;
+                while ((text = br.readLine()) != null) {
+                    osw.write(text);
+                }
+        } catch (FileNotFoundException e) {
+            System.out.println("ファイルがありません");
+        } catch (IOException e) {
+            System.out.println("IO Error");
+        }
+    }
+
+    public static void ReadAndWrite(){
+        File dir = new File("/Users/user/Desktop/JavaGold");
+        File[] list = dir.listFiles();
+        if (list != null) {
+            for (int i = 0; i < list.length; i++) {
+                if (list[i].isFile()) {
+                    System.out.println("[File] : " + list[i].toString());
+                    String fileName = list[i].getName();
+                    // 拡張子取得
+                    String extension = fileName.substring(fileName.lastIndexOf("."));
+                    switch(extension) {
+                        case ".txt":
+                            ReadAndWriteLog(list[i]);
+                            break;
+                        case ".ssv":
+                            ReadAndWriteLog(list[i]);
+                            break;
+                        case ".tsv":
+                            ReadAndWriteLog(list[i]);
+                            break;
+                        case ".csv":
+                            ReadAndWriteLog(list[i]);
+                            break;
+                    }
+                } else if (list[i].isDirectory()) {
+                    System.out.println("[Directory] : " + list[i].toString());
+                }
+            }
+        } else {
+            System.out.println("null");
         }
     }
 
