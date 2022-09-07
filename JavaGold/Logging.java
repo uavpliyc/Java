@@ -15,6 +15,9 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Properties;
 
+import gold8.ruledLineG.LayoutUtil;
+import gold8.ruledLineG.LayoutUtil.Align;
+
 public class Logging {
 
     private static final String LOGGING_PROPERTIES = "JavaGold/task2.properties";
@@ -108,7 +111,8 @@ public class Logging {
             ) {
                 String text;
                 while ((text = br.readLine()) != null) {
-                    osw.write(text);
+                    String shapingText = LayoutUtil.fillBlank(text, 150, true, Align.LEFT);
+                    osw.write(shapingText);
                 }
         } catch (FileNotFoundException e) {
             System.out.println("ファイルがありません");
