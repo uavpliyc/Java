@@ -27,6 +27,7 @@ public class Logging {
 
     private Logging() throws Exception {};
 
+    // 課題2-1：staticイニシャライザでプロパティファイル読み込み
     static {
         try {
             properties.load(Files.newBufferedReader(Paths.get(LOGGING_PROPERTIES), StandardCharsets.UTF_8));
