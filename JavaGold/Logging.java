@@ -63,6 +63,7 @@ public class Logging {
      */
     public static void outputToLog() {
 
+        // 課題3-1：ログファイル名に日時
         File file = new File(Logging.getProperty("OutputDirectory") + Logging.getProperty("LogFileName") + "-" + now.toString() + ".log");
 
         try (
@@ -156,7 +157,7 @@ public class Logging {
     }
 
     /**
-     * 開始日時出力メソッド
+     * 課題3-2：開始日時出力メソッド
      */
     public static long startTime() {
         long start = System.currentTimeMillis();
@@ -165,7 +166,7 @@ public class Logging {
     }
 
      /**
-     * 終了日時出力メソッド
+     * 課題3-2：終了日時出力メソッド
      */
     public static long endTime() {
         long end = System.currentTimeMillis();

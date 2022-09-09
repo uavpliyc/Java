@@ -3,7 +3,7 @@ package JavaGold;
 import java.util.Calendar;
 
 /**
- * 営業日数を計算するクラス.
+ * 課題3-3：営業日数を計算するクラス.
  */
 public class BusinessDayCalculator {
 
@@ -116,9 +116,9 @@ public class BusinessDayCalculator {
      * @throws IllegalArgumentException  {@code ordinal}が0以下の場合
      */
     public Calendar getFirstDay(Calendar cal, StartingPoint start, int ordinal) {
-        if (ordinal <= 0) {
-            throw new IllegalArgumentException("ordinal <= 0");
-        }
+        // if (ordinal <= 0) {
+        //     throw new IllegalArgumentException("ordinal <= 0");
+        // }
         Calendar c = startingFirstDay(cal, start);
         int count = 0;
 
@@ -155,9 +155,9 @@ public class BusinessDayCalculator {
      * @throws IllegalArgumentException  {@code ordinal}が0以下の場合
      */
     public Calendar getLastDay(Calendar cal, StartingPoint start, int ordinal) {
-        if (ordinal <= 0) {
-            throw new IllegalArgumentException("ordinal <= 0");
-        }
+        // if (ordinal <= 0) {
+        //     throw new IllegalArgumentException("ordinal <= 0");
+        // }
         Calendar c = startingLastDay(cal, start);
         int count = 0;
 

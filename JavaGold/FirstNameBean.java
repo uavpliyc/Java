@@ -3,6 +3,7 @@ package JavaGold;
 import gold8.bean.ConverterList;
 import gold8.bean.ConvertibleBean;
 
+// 課題4-1：データ格納Beanクラス
 public class FirstNameBean extends ConvertibleBean {
   
   private String Chinese;
