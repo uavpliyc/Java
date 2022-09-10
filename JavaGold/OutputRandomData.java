@@ -5,6 +5,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 
@@ -19,7 +20,17 @@ public class OutputRandomData {
 
     LocalDateTime now = LocalDateTime.now();
 
-    People tanaka = new People(1,"田中","たなか","tanaka","男","1993/03/26",now.toString(),10000000,10000);
+    People tanaka = new People(
+      RandomData.getIndex(100),
+      "田中",
+      "たなか",
+      "tanaka",
+      "男"
+      ,RandomData.getDate(LocalDate.of(1, 2, 3), LocalDate.of(5, 6, 7), 5),
+      now,
+      RandomData.getLong(1000000, 100000000, 10000),
+      RandomData.getInt(10000, 1000000, 1000)
+    );
 
     ArrayList<People> peopleList = new ArrayList<>();
 

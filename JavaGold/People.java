@@ -1,6 +1,8 @@
 package JavaGold;
 
 import java.io.Serializable;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 // シリアライズ(オブジェクトを入出力可能)
 public class People implements Serializable {
@@ -10,13 +12,13 @@ public class People implements Serializable {
   private String yomi;
   private String romaji;
   private String sex;
-  private String birthday;
-  private String registerDate;
+  private LocalDate birthday;
+  private LocalDateTime registerDate;
   private long insurance;
   private int premium;
 
   // コンストラクタ
-  public People(int id,String kanji,String yomi,String romaji,String sex,String birthday,String registerDate,long insurance,int premium) {
+  public People(int id,String kanji,String yomi,String romaji,String sex,LocalDate birthday,LocalDateTime registerDate,long insurance,int premium) {
     this.id = id;
     this.kanji = kanji;
     this.yomi = yomi;
@@ -67,19 +69,19 @@ public class People implements Serializable {
     this.sex = sex;
   }
 
-  public String getBirthday() {
+  public LocalDate getBirthday() {
     return this.birthday;
   }
 
-  public void setBirthday(String birthday) {
+  public void setBirthday(LocalDate birthday) {
     this.birthday = birthday;
   }
 
-  public String getRegisterDate() {
+  public LocalDateTime getRegisterDate() {
     return this.registerDate;
   }
 
-  public void setRegisterDate(String registerDate) {
+  public void setRegisterDate(LocalDateTime registerDate) {
     this.registerDate = registerDate;
   }
 
