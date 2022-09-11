@@ -26,7 +26,7 @@ public class OutputRandomData {
       "たなか",
       "tanaka",
       "男"
-      ,RandomData.getDate(LocalDate.of(1, 2, 3), LocalDate.of(5, 6, 7), 5),
+      ,RandomData.getDate(LocalDate.of(1900, 1, 1), LocalDate.of(2004, 1, 1), 5),
       now,
       RandomData.getLong(1000000, 100000000, 10000),
       RandomData.getInt(10000, 1000000, 1000)
