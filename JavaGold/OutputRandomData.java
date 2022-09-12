@@ -2,6 +2,9 @@ package JavaGold;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.File;
+import java.io.OutputStreamWriter;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
@@ -60,16 +63,16 @@ public class OutputRandomData {
       e.printStackTrace();
     }
 
-    // try (
-    //     FileOutputStream fos = new FileOutputStream(new File(Logging.getProperty("OutputDirectory") + "Contractor_" + nowFormat + ".csv"));
-    //     OutputStreamWriter osw = new OutputStreamWriter(fos);
-    // ) {
-    //   osw.write(1);
-    // } catch (FileNotFoundException e) {
-    //   System.out.println("ファイルがありません");
-    // } catch (IOException e) {
-    //   System.out.println("IO Error");
-    // }
+    try (
+        FileOutputStream fos = new FileOutputStream(new File(Logging.getProperty("OutputDirectory") + "Contractor_" + now + ".csv"));
+        OutputStreamWriter osw = new OutputStreamWriter(fos, Logging.getProperty("CharacterCode"));
+    ) {
+      osw.write(1);
+    } catch (FileNotFoundException e) {
+      System.out.println("ファイルがありません");
+    } catch (IOException e) {
+      System.out.println("IO Error");
+    }
 
   }
 
