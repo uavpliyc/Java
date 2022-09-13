@@ -14,10 +14,14 @@ public class FirstNameBean extends ConvertibleBean {
   // コンストラクタ
   public FirstNameBean() {
     super(new ConverterList());
-    addField(s -> Chinese = s, () -> Chinese);
-    addField(s -> hiragana = s, () -> hiragana);
-    addField(s -> English = s, () -> English);
-    addField(s -> sex = s, () -> sex);
+    try {
+      addField(s -> Chinese = s, () -> Chinese);
+      addField(s -> hiragana = s, () -> hiragana);
+      addField(s -> English = s, () -> English);
+      addField(s -> sex = s, () -> sex);
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
   }
 
   public String getChinese() {
