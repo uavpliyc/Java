@@ -5,7 +5,7 @@ import gold8.bean.ConvertibleBean;
 
 // 課題4-1：データ格納Beanクラス
 public class FamilyNameBean extends ConvertibleBean {
-  
+
   private String kanji;
   private String hiragana;
   private String English;
@@ -13,9 +13,13 @@ public class FamilyNameBean extends ConvertibleBean {
   // コンストラクタ
   public FamilyNameBean() {
     super(new ConverterList());
-    addField(s -> kanji = s, () -> kanji);
-    addField(s -> hiragana = s, () -> hiragana);
-    addField(s -> English = s, () -> English);
+		try {
+			addField(s -> kanji = s, () -> kanji);
+			addField(s -> hiragana = s, () -> hiragana);
+			addField(s -> English = s, () -> English);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
   }
 
 	public String getKanji() {
