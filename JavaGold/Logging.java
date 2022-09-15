@@ -176,6 +176,27 @@ public class Logging {
         return progress;
     }
 
+    /**
+     * 課題5-1：不正データの出力(ファイルに書き込み)
+     */
+    public static void outputWrongData(String log) {
+
+        File file = new File("WrongData：" + now.toString() + ".log");
+
+        try (
+            // バイト単位でデータ書き込み（trueで追記）
+            FileOutputStream fos = new FileOutputStream(file, true);
+            // 文字コード指定
+            OutputStreamWriter osw = new OutputStreamWriter(fos, Logging.getProperty("CharacterCode"));
+            ) {
+            osw.write(now.format(DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss")) + " "  +log);
+        } catch (FileNotFoundException e) {
+            System.out.println("ファイルがありません");
+        } catch (IOException e) {
+            System.out.println("IO Error");
+        }
+    }
+
 
 
 }
