@@ -3,6 +3,7 @@ package JavaGold;
 import java.io.Console;
 import java.io.PrintWriter;
 
+// 課題6-1：コンソールからの入力を読み込み、対話型プログラムを作成する
 public class talkApp extends OptionClass {
   public static void main(String[] args) {
 
