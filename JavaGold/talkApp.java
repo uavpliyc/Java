@@ -13,7 +13,7 @@ public class talkApp extends OptionClass {
       // readLineメソッド：Stringを返す
       String str = con.readLine("入力：");
       // endと入力されたら抜ける
-      if (str.equals("end")) {
+      if (str.equals(FINISH)) {
         break;
       }
       if (FINISH.equals(str)) {
