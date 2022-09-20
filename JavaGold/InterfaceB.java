@@ -2,6 +2,7 @@ package JavaGold;
 
 import java.util.Collection;
 
+// 課題7-1：インターフェースを用いて入出力処理に規約を設ける
 public interface InterfaceB extends InterfaceA {
 
   default void set(Collection<String> input) {
