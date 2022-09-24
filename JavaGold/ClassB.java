@@ -9,6 +9,14 @@ public class ClassB extends ClassA{
     // this.b = b;
   }
 
+  public String stringSet(String ... s) {
+    String rtnS = null;
+    for(String str : s) {
+      rtnS = str;
+    }
+    return rtnS;
+  }
+
   public void display(){
 
   }
