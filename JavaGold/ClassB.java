@@ -1,5 +1,7 @@
 package JavaGold;
 
+import java.util.Collection;
+
 public class ClassB extends ClassA{
 
   // InterfaceB b = new InterfaceB(){};
@@ -12,6 +14,14 @@ public class ClassB extends ClassA{
   public String stringSet(String ... s) {
     String rtnS = null;
     for(String str : s) {
+      rtnS = str;
+    }
+    return rtnS;
+  }
+
+  public String collectionSet(Collection<String> c) {
+    String rtnS = null;
+    for(String str : c) {
       rtnS = str;
     }
     return rtnS;
