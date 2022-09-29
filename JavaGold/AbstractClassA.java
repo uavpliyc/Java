@@ -16,5 +16,10 @@ public abstract class AbstractClassA implements InterfaceB {
 
     }
   }
+
+  // ファイルパスをコンソールに出力
+  public void display(File file) {
+    System.out.println(file.getPath());
+  }
   
 }
