@@ -21,5 +21,15 @@ public abstract class AbstractClassA implements InterfaceB {
   public void display(File file) {
     System.out.println(file.getPath());
   }
+
+  // ファイルパスリストを削除
+  public void clear(File file) {
+    File[] list = file.listFiles();
+    if(list != null) {
+      for(File f : list) {
+        f.delete();
+      }
+    }
+  }
   
 }
