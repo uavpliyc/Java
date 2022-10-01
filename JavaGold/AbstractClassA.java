@@ -5,6 +5,8 @@ import java.nio.file.Path;
 
 public abstract class AbstractClassA implements InterfaceB {
 
+  Path[] path;
+
   public void set(File file) {
     if(file != null) {
       
@@ -30,6 +32,11 @@ public abstract class AbstractClassA implements InterfaceB {
         f.delete();
       }
     }
+  }
+
+  // ファイルパスリストを返す
+  protected Path[] getPathList() {
+    return path;
   }
   
 }
