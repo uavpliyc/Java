@@ -5,11 +5,12 @@ import java.nio.file.Path;
 
 public abstract class AbstractClassA implements InterfaceB {
 
+  File file;
   Path[] path;
 
   public void set(File file) {
     if(file != null) {
-      
+      this.file = file;
     }
   }
 
