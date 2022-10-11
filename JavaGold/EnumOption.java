@@ -1,5 +1,6 @@
 package JavaGold;
 
+// 課題7-3：列挙型を用いてオプションの制御を改善する
 public enum EnumOption {
 
   FINISH("end");
