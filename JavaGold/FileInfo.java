@@ -20,4 +20,9 @@ public class FileInfo {
     }
   }
 
+  // ファイル属性変更
+  public void alterFileAttr() {
+
+  }
+
 }
