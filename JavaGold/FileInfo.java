@@ -22,7 +22,11 @@ public class FileInfo {
 
   // ファイル属性変更
   public void alterFileAttr() {
-
+    try {
+      Files.setAttribute(path, "dos", true);
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
   }
 
 }
