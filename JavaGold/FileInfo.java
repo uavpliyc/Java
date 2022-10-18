@@ -20,10 +20,19 @@ public class FileInfo {
     }
   }
 
-  // ファイル属性変更
+  // ファイル属性変更1
   public void alterFileAttr() {
     try {
       Files.setAttribute(path, "dos", true);
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
+  }
+
+  // ファイル属性変更2
+  public void alterFileAttrPos() {
+    try {
+      Files.setAttribute(path, "posix", true);
     } catch (IOException e) {
       e.printStackTrace();
     }
