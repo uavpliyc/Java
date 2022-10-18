@@ -38,4 +38,9 @@ public class FileInfo {
     }
   }
 
+  // 課題6-4：ファイルサイズ取得
+  public void getFileSize() {
+    
+  }
+
 }
