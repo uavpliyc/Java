@@ -11,4 +11,8 @@ public class ChangeStream {
   // Stream → IntStream
   Stream<Integer> s3 = Stream.of(1,2,3);
   IntStream s4 = s3.mapToInt(x -> x);
+
+  // IntStream → Stream
+  IntStream s5 = IntStream.of(5,6,7);
+  Stream<Integer> s6 = s5.mapToObj(x -> x);
 }
