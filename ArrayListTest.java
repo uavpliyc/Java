@@ -1,7 +1,9 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.function.UnaryOperator;
 
 public class ArrayListTest {
   public static void main(final String[] args) {
@@ -32,6 +34,12 @@ public class ArrayListTest {
     Iterator<Integer> iter2 = list2.iterator();
     while(iter.hasNext())
       System.out.println(iter2.next());
+
+    List<Integer> li = Arrays.asList(1,2,3);
+    UnaryOperator<Integer> u = s -> s * 2;
+    // replaceAll
+    li.replaceAll(u);
+    li.forEach(n -> System.out.println(n));
 
   }
 }
