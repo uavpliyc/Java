@@ -45,6 +45,10 @@ public class FunctionInterface {
     BiFunction<Integer,Integer,Integer> biFunc = (a,b) -> a * b;
     System.out.println(biFunc.apply(10, 10));
 
+    // Doubleも入る場合(最後のジェネリクスがIntegerだとコンパイルエラー)
+    BiFunction<Integer, Double, Double> biFunc2 = (a,b) -> a + b;
+    System.out.println(biFunc2.apply(1, 2.5));
+
     /**
      * Consumerインターフェース
      * @param T
@@ -75,7 +79,7 @@ public class FunctionInterface {
     System.out.println(sup.get());
 
     /**
-     * BiFunctionインターフェース
+     * IntFunctionインターフェース
      */
     IntFunction<String[]> obj = String[]::new;
     System.out.println(obj.apply(10).length);
