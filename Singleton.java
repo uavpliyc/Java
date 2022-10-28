@@ -1,12 +1,12 @@
 public class Singleton {
 
-  // 自身のインスタンス作成
+  // ①自身のインスタンス作成(private static final)
   private static final Singleton singleton = new Singleton();
 
-  // コンストラクタ(外部からインスタンス生成を防ぐ)
+  // ②コンストラクタ(privateで外部からインスタンス生成を防ぐ)
   private Singleton() {};
 
-  // 自身のインスタンスの参照を返す
+  // ③自身のインスタンスの参照を返す
   public static Singleton getInstance() {
     return singleton;
   }
