@@ -30,7 +30,7 @@ public class FunctionInterface {
     System.out.println(calc.calculate(3, 2.5));
 
     /**
-     * Functionインターフェース
+     * Functionインターフェース(apply)
      * @param T
      * @return R
     */
