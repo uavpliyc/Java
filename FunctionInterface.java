@@ -50,7 +50,7 @@ public class FunctionInterface {
     System.out.println(biFunc2.apply(1, 2.5));
 
     /**
-     * Consumerインターフェース
+     * Consumerインターフェース(accept)
      * @param T
      */
     Consumer<Integer> con = a -> System.out.println("consumer");
