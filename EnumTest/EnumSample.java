@@ -30,6 +30,9 @@ public class EnumSample {
     // valueOfメソッド(文字列から列挙定数名取得)
     System.out.println("valueOf:" + Season.valueOf("Autumn"));
 
+    // 列挙値の引数は定義したゲッターを使用
+    System.out.println("getId:" + Season.Autumn.getId());
+
     // valuesメソッド(列挙値を全て返す)
     Season[] values = Season.values();
     for(Season s : values){
@@ -37,12 +40,7 @@ public class EnumSample {
     }
 
     // ordinalメソッド：添字表示(0スタート)
-    System.out.println("ordinal :" + season.ordinal());
-    // valuesメソッド
-    Season[] arr = Season.values();
-    for(Season s : arr) {
-      System.out.println("Season :" + s.toString());
-    }
+    System.out.println("ordinal :" + Season.Autumn.ordinal());
 
   }
 
@@ -64,5 +62,18 @@ public class EnumSample {
     public int getId(){
       return id;
     }
-  };
+  }
+
+  protected enum Test {
+    //各列挙値内でオーバーライドしないとコンパイルエラー
+    A{void method() {
+      System.out.println("A");
+    }},
+    B{void method() {
+      System.out.println("B");
+    }};
+
+    // 抽象メソッド
+    abstract void method();
+  }
 }
