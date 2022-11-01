@@ -18,6 +18,9 @@ public class EnumSample {
       case Winter:
         System.out.println("冬");
         break;
+      case NA:
+        System.out.println("NA");
+        break;
     }
 
     // name,toStringメソッド(列挙定数名取得)
@@ -44,13 +47,18 @@ public class EnumSample {
   }
 
   protected enum Season {
-    Spring(1), Summer(2), Autumn(3), Winter(4);
+    Spring(1), Summer(2), Autumn(3), Winter(4), NA;
 
-    private final int id;
+    private int id;
 
     // コンストラクタはprivateのみ
-    private Season( int id){
+    private Season(int id){
       this.id = id;
+    }
+
+    // コンストラクタのオーバーロード（NAは初期値0になる）
+    private Season() {
+
     }
 
     public int getId(){
