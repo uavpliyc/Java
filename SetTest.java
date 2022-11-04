@@ -22,6 +22,8 @@ public class SetTest {
     System.out.println(set1.ceiling("a"));
     // floor：引数と等しいかそれより小さいものの中で最大の値を返す
     System.out.println(set1.floor("b"));
+    // contains：引数の要素が存在するか
+    System.out.println("contains:" + set1.contains("orange"));
 
     // Iteratorを使って要素取得
     Iterator<String> iter = set1.iterator();
