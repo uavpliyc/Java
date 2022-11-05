@@ -13,6 +13,8 @@ public class QueueTest {
     System.out.println(q.peek());
     // pool：最初の要素を削除して取得
     System.out.println(q.poll());
+    // remove：最初の要素を削除して取得
+    System.out.println(q.remove());
     System.out.println(q.peek());
 
   }
