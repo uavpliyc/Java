@@ -17,5 +17,8 @@ public class QueueTest {
     System.out.println(q.remove());
     System.out.println(q.peek());
 
+    q.clear();
+    System.out.println(q);
+
   }
 }
