@@ -1,4 +1,8 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class GenericsClassMain {
+
   // 参照型のみ
   // 右のダイヤモンドは省略可
   GenericsClass<int[]> gc = new GenericsClass<>();
@@ -16,4 +20,25 @@ public class GenericsClassMain {
     return gc2;
   }
 
+  public static void main(String[] args) {
+    List<A> list1 = new ArrayList<>();
+    list1.add(new A());
+    // List<? extends B> list2 = new ArrayList<>();
+    // list2.add(new A());
+    // TODO：逆じゃない？
+    List<? super A> list3 = new ArrayList<>();
+    list3.add(new B());
+  }
+}
+
+class A {
+  public String method() {
+    return "A";
+  }
+}
+
+class B extends A {
+  public String method() {
+    return "B";
+  }
 }
