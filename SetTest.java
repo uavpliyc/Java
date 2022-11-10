@@ -11,13 +11,14 @@ public class SetTest {
     set.add(1);
     set.add(100);
     set.add(null);
-    System.out.println(set);
-
+    System.out.println("HashSet:" + set);
+    
     // TreeSet
     TreeSet<String> set1 = new TreeSet<>();
     set1.add("apple");
-    set1.add("melon");
     set1.add("strawberry");
+    set1.add("melon");
+    System.out.println("TreeSet:" + set1);
     // ceiling：引数と等しいかそれより大きいものの中で最小の値を返す
     System.out.println(set1.ceiling("a"));
     // floor：引数と等しいかそれより小さいものの中で最大の値を返す
