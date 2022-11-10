@@ -17,6 +17,7 @@ public class ComparableTest {
   }
 }
 
+// Treeに入れるため、Comparableを実装
 class ComparableObj implements Comparable<ComparableObj> {
 
   private int rank;
