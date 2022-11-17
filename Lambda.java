@@ -12,9 +12,9 @@ public class Lambda {
     List<String> players = Arrays.asList("tanaka","sato");
     players.forEach(System.out::println);
 
-    Runnable run = () -> System.out.println("Runnable");
+    Runnable r = () -> System.out.println("Runnable");
 
-    run.run();
+    r.run();
 
   }
 }

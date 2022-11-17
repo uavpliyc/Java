@@ -1,5 +1,6 @@
 import java.util.function.BiConsumer;
 import java.util.function.BiFunction;
+import java.util.function.BiPredicate;
 import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.IntFunction;
@@ -70,6 +71,14 @@ public class FunctionInterface {
      */
     Predicate<Integer> pre = a -> a > 10;
     System.out.println(pre.test(20));
+
+    /**
+     * BiPredicateインターフェース
+     * @param T,U
+     * @return boolean
+     */
+    BiPredicate<Integer, Integer> pre2 = (a,b) -> a > b;
+    System.out.println(pre2.test(20,10));
 
     /**
      * Supplierインターフェース
