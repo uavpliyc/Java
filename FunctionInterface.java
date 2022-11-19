@@ -1,6 +1,7 @@
 import java.util.function.BiConsumer;
 import java.util.function.BiFunction;
 import java.util.function.BiPredicate;
+import java.util.function.BinaryOperator;
 import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.IntFunction;
@@ -100,6 +101,14 @@ public class FunctionInterface {
      */
     UnaryOperator<Integer> unary = a -> a * 120;
     System.out.println(unary.apply(10));
+
+    /**
+     * BinaryOperatorインターフェース
+     * @param T
+     * @return T
+     */
+    BinaryOperator<Integer> biary = (a,b) -> a * b;
+    System.out.println(biary.apply(10,20));
 
     // 基本データ型を扱う関数型インターフェース
     IntFunction<String[]> obj3 = String[]::new;
