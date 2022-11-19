@@ -50,12 +50,13 @@ public class StreamMethod {
 
     c.stream().flatMap(e -> e.stream()).forEach(s -> System.out.println(s + " "));
 
-    String[] values = {"age", "name", "sample"};
-    List<String> list = Arrays.asList(values);
+    List<String> list = Arrays.asList("age", "name", "sample");
     // findFirstメソッド：Optional型を返す ※String型ではない
-    Optional<String> str = list.stream().filter(s -> s.length() > 3).findFirst();
-    System.out.println("str:" + str);
-    System.out.println("str.get():" + str.get());
+    Optional<String> op1 = list.stream().filter(s -> s.length() > 3).findFirst();
+    System.out.println("str.get():" + op1.get());
+    // findAny
+    Optional<String> op2 = list.stream().filter(s -> s.length() > 3).findAny();
+    System.out.println("str.get():" + op2.get());
 
     // range(終わり含まない)
     IntStream.range(1, 5).forEach(System.out::println);
@@ -88,6 +89,11 @@ public class StreamMethod {
     .peek(e -> System.out.println(e + " "));
     stream.forEach(System.out::println);
 
+    // distinct
+    Stream<String> stream2 = Stream.of("banana","apple","banana")
+    .distinct();
+    stream2.forEach(System.out::println);
+
     Stream<List<String>> s1 = Stream.of(Arrays.asList("1", "Bill"), Arrays.asList("2", null));
     Stream<String> s2 = s1.flatMap((x) -> x.stream());
     s2.forEach(System.out::println);
@@ -111,6 +117,7 @@ public class StreamMethod {
     .sequential()
     .forEach(System.out::println);
 
+    // limit
     Stream.generate(() -> 0)
     .limit(3)
     .forEach(System.out::println);
@@ -118,6 +125,22 @@ public class StreamMethod {
     Stream.iterate(0, i -> i++)
     .limit(3)
     .forEach(System.out::println);
+
+    // skip
+    IntStream.range(1, 6)
+    .skip(3L)
+    .forEach(System.out::println);
+
+    // toArray
+    int[] ary1 = IntStream.range(1, 5).toArray();
+    String[] ary2 = Stream.of("a", "b").toArray(String[]::new);
+ 
+    for(int i : ary1) {
+      System.out.println(i);
+    }
+    for(String str : ary2) {
+      System.out.println(str);
+    }
 
   }
 }
