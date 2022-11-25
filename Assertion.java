@@ -6,6 +6,6 @@ public class Assertion {
     // ()なしでも可能
     assert price > 0;
     // 最初のアサーションでストップした場合はここまで辿り着かない
-    assert false : ("false");
+    assert false : "false";
   }
 }
