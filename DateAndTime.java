@@ -9,7 +9,6 @@ import java.time.ZoneId;
 import java.time.ZoneOffset;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
-import java.time.format.FormatStyle;
 import java.time.temporal.ChronoUnit;
 import java.time.temporal.Temporal;
 import java.util.Date;
@@ -17,6 +16,18 @@ import java.util.Locale;
 
 public class DateAndTime {
   public static void main(String[] args) {
+
+    // 夏時間
+    ZoneId z = ZoneId.of("America/Los_Angeles");
+    LocalDate date = LocalDate.of(2022, 3, 13);
+    LocalTime time1 = LocalTime.of(1, 00);
+    LocalTime time2 = LocalTime.of(2, 00);
+    ZonedDateTime zdatetime1 = ZonedDateTime.of(date, time1, z);
+    ZonedDateTime zdatetime2 = ZonedDateTime.of(date, time2, z);
+
+    System.out.println(zdatetime1);
+    System.out.println(zdatetime2);
+
     //コンストラクタがprivateなのでインスタンス生成はできない
 
     LocalDate dd = LocalDate.now();

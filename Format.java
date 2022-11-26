@@ -1,4 +1,3 @@
-import java.text.DecimalFormat;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
@@ -59,7 +58,6 @@ public class Format {
 
   // カスタムフォーマットメソッド
   public static void customFormat(String pattern, double val) {
-    DecimalFormat df = new DecimalFormat(pattern);
     System.out.println("(" + pattern + "," + val + "):");
   }
 }
