@@ -1,28 +1,29 @@
 import java.text.DecimalFormat;
-import java.text.NumberFormat;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
 
 public class Format {
   public static void main(String[] args) {
-    // NumberFormatオブジェクト取得
-    NumberFormat num = NumberFormat.getInstance();
-    // フォーマット化
-    String str = num.format(500.00);
-    System.out.println(str);
-    // 文字列を数値に変換
-    try {
-      Number n = num.parse("500.00");
-      System.out.println(n);
-      // Number型をdouble型に変換
-      double d = n.doubleValue();
-      System.out.println(d);
-    } catch (Exception e) {
-      e.printStackTrace();
-    }
+
+    ZoneId zid = ZoneId.systemDefault();
+    LocalDateTime ldt = LocalDateTime.of(2022, 12, 10, 10, 30, 45);
+    ZonedDateTime zdt = ZonedDateTime.of(ldt, zid);
+
+    DateTimeFormatter dtf1 = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.FULL);
+    DateTimeFormatter dtf2 = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.LONG);
+    DateTimeFormatter dtf3 = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM);
+    DateTimeFormatter dtf4 = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.SHORT);
+
+    System.out.println(dtf1.format(zdt));
+    // System.out.println(dtf1.format(ldt));
+    System.out.println(dtf2.format(zdt));
+    System.out.println(dtf3.format(zdt));
+    System.out.println(dtf4.format(zdt));
 
     DateTimeFormatter fmt = DateTimeFormatter.ofPattern("yy,MM,dd");
     String target = "21,12,22";
@@ -59,7 +60,6 @@ public class Format {
   // カスタムフォーマットメソッド
   public static void customFormat(String pattern, double val) {
     DecimalFormat df = new DecimalFormat(pattern);
-    String data = df.format(val);
-    System.out.println("(" + pattern + "," + val + "):" + data);
+    System.out.println("(" + pattern + "," + val + "):");
   }
 }

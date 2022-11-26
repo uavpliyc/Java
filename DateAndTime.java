@@ -3,18 +3,27 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.Month;
+import java.time.OffsetDateTime;
 import java.time.Period;
 import java.time.ZoneId;
+import java.time.ZoneOffset;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
 import java.time.temporal.ChronoUnit;
 import java.time.temporal.Temporal;
 import java.util.Date;
+import java.util.Locale;
 
 public class DateAndTime {
   public static void main(String[] args) {
     //コンストラクタがprivateなのでインスタンス生成はできない
+
+    LocalDate dd = LocalDate.now();
+    DateTimeFormatter dtf1 = DateTimeFormatter.ofPattern("MMMM");
+    DateTimeFormatter dtf2 = DateTimeFormatter.ofPattern("MMMM", Locale.US);
+    System.out.println(dd.format(dtf1));
+    System.out.println(dd.format(dtf2));
 
     // java.timeパッケージ2つの列挙型(MONDAY〜SUNDAYとJANUARY〜DECEMBER)
     for (DayOfWeek dayOfWeek : DayOfWeek.values()) {
@@ -23,6 +32,10 @@ public class DateAndTime {
     for (Month month : Month.values()) {
       System.out.println(month);
     }
+    LocalDate ld = LocalDate.of(2022, Month.JANUARY, 01);
+    Month m = ld.getMonth();
+    // Month m = d.getMonthValue();
+    System.out.println(m);
 
     // -----------------------「LocalDateクラス」--------------------------------
 
@@ -101,8 +114,8 @@ public class DateAndTime {
     System.out.println(now.format(myFmt2));
 
     // ロケール固有のフォーマッタを返す
-    DateTimeFormatter dtfmt = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM);
-    System.out.println(now.format(dtfmt));
+    // DateTimeFormatter dtfmt = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM);
+    // System.out.println(now.format(dtfmt));
 
     // -----------------------「ZoneDateTimeクラス」--------------------------------
 
@@ -111,6 +124,18 @@ public class DateAndTime {
     ZoneId zoneId = ZoneId.systemDefault();
     ZonedDateTime zone = ZonedDateTime.of(ofDateTime, zoneId);
     System.out.println(zone);
+
+    ZoneId zoneId2 = ZoneId.of("America/Los_Angeles");
+    ZonedDateTime zone2 = ZonedDateTime.of(2022,12,10,10,30,45,180,zoneId2);
+    System.out.println(zone2);
+
+    // -----------------------「OffSetDateTimeクラス」--------------------------------
+
+    // ZoneOffSetクラス：タイムゾーンID(+09:00は協定世界時との時差)
+    // systemDefaultメソッド
+    ZoneOffset zoneoff = ZoneOffset.of("+09:00");
+    OffsetDateTime offset = OffsetDateTime.of(ofDateTime, zoneoff);
+    System.out.println(offset);
 
     // -----------------------「Periodクラス」--------------------------------
 
