@@ -1,3 +1,4 @@
+import java.text.NumberFormat;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
@@ -8,6 +9,12 @@ import java.time.format.FormatStyle;
 
 public class Format {
   public static void main(String[] args) {
+
+    NumberFormat num = NumberFormat.getInstance();
+    NumberFormat cur = NumberFormat.getCurrencyInstance();
+
+    System.out.println(num.format(1000));
+    System.out.println(cur.format(1000));
 
     ZoneId zid = ZoneId.systemDefault();
     LocalDateTime ldt = LocalDateTime.of(2022, 12, 10, 10, 30, 45);
