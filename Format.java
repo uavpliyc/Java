@@ -1,4 +1,5 @@
 import java.text.NumberFormat;
+import java.text.ParseException;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
@@ -12,6 +13,13 @@ public class Format {
 
     NumberFormat num = NumberFormat.getInstance();
     NumberFormat cur = NumberFormat.getCurrencyInstance();
+    try {
+      Number n = num.parse("3000");
+      // Number n2 = num.parse("$3,000");
+      System.out.println(n);
+    } catch (ParseException e) {
+      e.printStackTrace();
+    }
 
     System.out.println(num.format(1000));
     System.out.println(cur.format(1000));
