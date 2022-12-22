@@ -8,17 +8,17 @@ public class PathInterface {
   public static void main(String[] args) {
     Path path = Paths.get("/Users/user/Desktop/test.txt");
     // toStringメソッド
-    System.out.format("toString: %s%n" , path.toString());
+    System.out.println("toString: " + path.toString());
     // getFileNameメソッド
-    System.out.format("getFileName: %s%n" , path.getFileName());
+    System.out.println("getFileName: " + path.getFileName());
     // getNameメソッド：ルートパスから引数の数の要素を返す
-    System.out.format("getName: %s%n" , path.getName(0));
+    System.out.println("getName: " + path.getName(0));
     // getNameCountメソッド
-    System.out.format("getNameCount: %s%n" , path.getNameCount());
+    System.out.println("getNameCount: " + path.getNameCount());
     // getRootメソッド
-    System.out.format("getRoot: %s%n" , path.getRoot());
+    System.out.println("getRoot: " + path.getRoot());
     // getParentメソッド：１階層上のオブジェクト(/Users/user/Desktop)
-    System.out.println(path.getParent());
+    System.out.println("getParent: " + path.getParent());
     // subPathメソッド：開始から終わりまでのパスを返す(0スタート、終わり含まない)
     System.out.println("subPath: " + path.subpath(1, 3));
     // normalizeメソッド：パスを簡潔に
