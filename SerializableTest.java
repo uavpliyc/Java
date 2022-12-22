@@ -22,13 +22,13 @@ public class SerializableTest {
     }
 }
 
-class A implements Serializable {
+class A {
     A() {
         System.out.println("A");
     }
 }
 
-class B extends A {
+class B extends A implements Serializable {
     B() {
         System.out.println("B");
     }
