@@ -6,6 +6,7 @@ import java.nio.file.StandardCopyOption;
 import java.nio.file.attribute.BasicFileAttributes;
 import java.nio.file.attribute.DosFileAttributes;
 import java.util.List;
+import java.util.function.BiPredicate;
 import java.util.stream.Collectors;
 
 public class FilesTest {
@@ -60,5 +61,18 @@ public static void main(String[] args) throws IOException {
         DosFileAttributes dattr = Files.readAttributes(path, DosFileAttributes.class);
         System.out.println(dattr.isArchive());
         System.out.println(dattr.isDirectory());
+    }
+
+    void findTxt() throws IOException {
+        Path dir = Paths.get("tmp/");
+
+        BiPredicate<Path, BasicFileAttributes> matcher = (path, attr) -> {
+            if (attr.isRegularFile() && path.getFileName().toString().endsWith(".txt")) {
+                return true;
+            }
+            return false;
+        };
+    
+        Files.find(dir, 10, matcher).forEach(System.out::println);
     }
 }
