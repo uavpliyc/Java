@@ -11,8 +11,9 @@ import java.util.stream.Collectors;
 
 public class FilesTest {
 public static void main(String[] args) throws IOException {
+    Path dir = Paths.get("tmp/");
 
-
+    Files.walk(dir).forEach(System.out::println);
 }
 
 
@@ -74,5 +75,11 @@ public static void main(String[] args) throws IOException {
         };
     
         Files.find(dir, 10, matcher).forEach(System.out::println);
+    }
+
+    void listDir() throws IOException {
+        Path dir = Paths.get("tmp/");
+
+        Files.list(dir).forEach(System.out::println);
     }
 }
