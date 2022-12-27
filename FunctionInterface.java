@@ -107,7 +107,7 @@ public class FunctionInterface {
      * @param T
      * @return T
      */
-    BinaryOperator<Integer> biary = (a,b) -> a * b;
+    BinaryOperator<Integer> biary = (a,b) -> a + b;
     System.out.println(biary.apply(10,20));
 
     // 基本データ型を扱う関数型インターフェース
