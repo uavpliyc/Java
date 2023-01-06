@@ -17,6 +17,15 @@ import java.util.Locale;
 public class DateAndTime {
   public static void main(String[] args) {
 
+    LocalDate sta = LocalDate.of(2023, Month.JANUARY, 1);
+    LocalDate en = LocalDate.of(2023, Month.JANUARY, 20);
+
+    Temporal tem = ChronoUnit.DAYS.addTo(sta, 10);
+    long l = ChronoUnit.DAYS.between(sta, en);
+
+    System.out.println(tem);
+    System.out.println(l);
+
     // 夏時間
     ZoneId z = ZoneId.of("America/Los_Angeles");
     LocalDate date = LocalDate.of(2022, 3, 13);
