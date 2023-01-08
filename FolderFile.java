@@ -1,4 +1,7 @@
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -6,6 +9,18 @@ import java.nio.file.attribute.DosFileAttributes;
 
 public class FolderFile {
   public static void main(String[] args) {
+
+    try (BufferedReader br = new BufferedReader(new FileReader("test2.txt"))) {
+      br.skip(4);
+      System.out.println((char)br.read());
+      br.mark(5);
+      System.out.println(br.readLine());
+      br.reset();
+      System.out.println((char)br.read());
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
+    
 
     FolderFile f = new FolderFile();
     System.out.println(f.concatPath("c:", "index.html"));
